@@ -14,7 +14,7 @@ I'm just "spark gap" testing here, with an old, desperately-in-need-of-a-charge 
 ### StickBot
 [![StickBot with a solenoid](https://img.youtube.com/vi/Nz2LlsDFKx4/0.jpg)](https://youtu.be/Nz2LlsDFKx4)
 
-another "spark gap" test, with the same battery. This mech is using a hard PLA ovoid sphere, approximating a drum stick tip, again, screwed on the guide shaft, replacing the retainer nut. Apologies for the waffle, but it explains my reasons for completely throwing out the previous iteration of this project.
+And another "spark gap" test, with the same battery. This mech is using a hard PLA ovoid sphere, approximating a drum stick tip, again, screwed on the guide shaft, replacing the retainer nut. Apologies for the waffle, but it explains my reasons for completely throwing out the previous iteration of this project.
 
 ### HiHats
 The hi-hat lifiting drive is taking a little longer to visualise with solenoid mechs, but probably involves a solenoid pulling the bottom cymbal down against a spring for "open", another pulling the top cymbal down against another spring for "closed" and a quiescent "half open" state the middle position, thus only requring power to open or close the hats, leaving them in the sizzling position by adjusting spring tensions and the clutches to balance cymbal masses. 2 stick bots will hit the cynbals in the usual way.
