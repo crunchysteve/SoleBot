@@ -6,7 +6,8 @@ Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI dru
 I've unpublished the car door lock actuator version because it was latent and not hard hitting enough. I'm in the process of prototyping a lighter, simpler moving mechanism using [JF-0826B](https://www.google.com/search?q=JF-0826B+solenoid&rlz=1C5CHFA_enAU930AU930&oq=JF-0826B+solenoid&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDsyBggDEEUYPdIBCDQ2NDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8), 12V, 2A, 20N solenoids and light weight, 3D printed beater heads. I have two, quick, dirty, minimum voltage test videos here...
 
 ### KickBot
-![KickBot with a solenoid](https://img.youtube.com/vi/OM4pcrr3s-8/0.jpg)](https://youtu.be/OM4pcrr3s-8)
+[![KickBot with a solenoid](https://img.youtube.com/vi/OM4pcrr3s-8/0.jpg)](https://youtu.be/OM4pcrr3s-8)
+[![Watch the video](https://img.youtube.com/vi/nTQUwghvy5Q/default.jpg)](https://youtu.be/nTQUwghvy5Q)
 
 I'm just "spark gap" testing here, with an old, desperately-in-need-of-a-charge SLA battery. I estimate about 6 volts to a 12V, 6 ohm solenoid, so 1A and 6 watts power and it's already better volume than any test of the previous mech, with less mech noise. The plan is to have MIDI velocity equivalent to a 24v pulse, duty managed to never drive beyond 24W (12v * 2A) RMS. This mech is using a hard PLA beater replacing the retaining nut on the guide shaft which protrudes as the solenoid operates, equivalent to a wood beater. A padded beater could be made by gluing 6mm floor mat foam to the curved beater face.
 
