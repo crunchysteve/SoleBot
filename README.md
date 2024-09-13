@@ -3,6 +3,9 @@
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW
 
 ---
+20240913: Over the next month I hope to upload some rudimentary Arduino code and begin testing the kick and snare mechs. If I'm happy with the result.
+
+---
 
 I've unpublished the car door lock actuator version because it was latent and not hard hitting enough. I'm in the process of prototyping a lighter, simpler moving mechanism using [JF-0826B](https://www.google.com/search?q=JF-0826B+solenoid&rlz=1C5CHFA_enAU930AU930&oq=JF-0826B+solenoid&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDsyBggDEEUYPdIBCDQ2NDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8), 12V, 2A, 20N solenoids and light weight, 3D printed beater heads. I have two, quick, dirty, minimum voltage test videos here...
 
