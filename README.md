@@ -3,7 +3,7 @@
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW
 
 ---
-20240913: Over the next month I hope to upload some rudimentary Arduino code and begin testing the kick and snare mechs. If I'm happy with the result.
+20240913: Over the next month I hope to upload some rudimentary Arduino code and begin testing the kick and snare mechs. If I'm happy with the result, I'll be proceeding with the project. If not, I'll look into what I can do, designwise, to make the project make me happy enough to proceed.
 
 ---
 
