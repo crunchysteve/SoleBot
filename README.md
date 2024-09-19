@@ -1,9 +1,12 @@
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![[OpenSCAD](https://openscad.org)](https://github.com/crunchysteve/Solebot/blob/main/images/openscad.png?raw=true) ![PlatformIO](https://img.shields.io/badge/PlatformIO-%23222.svg?style=for-the-badge&logo=platformio&logoColor=%23f5822a) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Espressif](https://img.shields.io/badge/espressif-E7352C.svg?style=for-the-badge&logo=espressif&logoColor=white)
+
 # Solebot
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW
 
 ---
+
 10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
+
 [![Video of a solenoid on my breadboard](https://img.youtube.com/vi/0h4IAesiM5w/0.jpg)](https://youtu.be/0h4IAesiM5w)
 [![Video of my solenoid drumming test](https://img.youtube.com/vi/Kuo8L1GTG-U/0.jpg)](https://youtu.be/Kuo8L1GTG-U)
 
