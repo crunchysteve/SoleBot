@@ -18,7 +18,9 @@ So, the things going on here... I have an Uno running [testTool.ino](./code/test
 
 ![Pulses of pulse width modulation](https://img.youtube.com/vi/VhJ9suvsufc/0.jpg)
 
-The snare drum will have 3 solenoids, left stick, right stick and rimshot. MIDI standards call this sidestick, but I'm going to be designing and arranging (in my DAW or drum machine) for "flatstick", where the drummer brings the stick down so that shaft hist the rim as well as the tip hitting the skin - a classic rock and blues sound, snare with a crack! MIDI "Snare 1" will trigger left stick, "Snare 2" triggers right stick, "Sidestick" will trigger right stick and rimshot together and, when hi-hat gets a left or right hit, these will override a time-adjacent left or right snare hit, respectively. 
+While I'm still trying to decide whether to localise drum control to each drum and have a central controller that reads and redistributes the incoming MIDI signal as isolated MIDI signals for each drum, or use a single micro, like a Mega2560, this could also be done much simpler (and less musically nuanced) using a Nano or Uno and a single stick on each drum and cymbal. Hih-Hat lifting actions can be done on purely digital pins, even the crash cymbal could be "bit-banged" to create a low res pulsed PWM. I should probably prototype this way, "but bite off more than you can chew!" is my motto, LOL.
+
+So, the snare drum will have 3 solenoids, left stick, right stick and rimshot. MIDI standards call this sidestick, but I'm going to be designing and arranging (in my DAW or drum machine) for "flatstick", where the drummer brings the stick down so that shaft hits the rim as well as the tip hitting the skin - a classic rock and blues sound, snare with a crack! MIDI "Snare 1" will trigger left stick, "Snare 2" triggers right stick, "Sidestick" will trigger right stick and rimshot together and, when hi-hat gets a left or right hit, these will override a time-adjacent left or right snare hit, respectively. 
 
 Opening and closing the hats will be done by lifting the the top hat from half open to open and lifting the bottom hat beyond half open to close them. My kit is four piece, so my rack tom will have 2 solenoids (MIDI Toms 1 and 2) and my floor tom will have one solenoid. The ride cymbal will have 2 solenoids for rim and bell, the crash cymbal will have one solenoid. The kick will have 2 beaters (Kick 1 and 2) but operating on the one drum. Cowbell (or woodblock) rounds us out with 16 solenoids.
 
@@ -27,6 +29,18 @@ The next big test will be whether these JF-1250B solenoids can lift my cheap, he
 There are no sticks or pedals in this system. I've 3D modelled and printed stick tips which screw directly on to the solenoid where the retainer nut screws onto the back end of the actuator shaft. The same method is applied to the kick drum, but using a larger, cylindrical beater design of around the size and shape of a wood beater contact patch. This beater will also be used for the snare rimshot solenoid, to give more mass to the rim hit, like the force of a stick. The prototypes are printed with 3mm holes, but the finished design will probably have heat-inserted, brass, M3 insert nuts for easier fitting and a forced tap on initial install.
 
 I'll add each design and code element as I get them working. I'll also be coding the beater pulse to a maximum width to allow the beater to just reach the skin, at a MIDI velocity of 1 or so (12v peak), before power is cut. This should create a similar power dynamic to a human drummer - the harder they hit, more likely the stick is pressed and held to the skin for a short time. This timing may need a non-linear profile for optimal rebound.
+
+My plans in a nutshell
+  Beaters     Solenoids   Detail
+    Kick        2         (Kick 1 and 2)
+    Snare       3         (Left, riight and rimshot)
+    Hats        4         (Left, right, open and close. Left and right will override left and right on snare)
+    Tom         2         (Left and right)
+    Floor       1
+    Ride        3
+    Cowbell     1         (No more cowbell!)
+    ----------------------------------------
+    Toatal     16
 
 ---
 
