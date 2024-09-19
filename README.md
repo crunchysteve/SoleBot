@@ -30,6 +30,7 @@ There are no sticks or pedals in this system. I've 3D modelled and printed stick
 
 I'll add each design and code element as I get them working. I'll also be coding the beater pulse to a maximum width to allow the beater to just reach the skin, at a MIDI velocity of 1 or so (12v peak), before power is cut. This should create a similar power dynamic to a human drummer - the harder they hit, more likely the stick is pressed and held to the skin for a short time. This timing may need a non-linear profile for optimal rebound.
 
+```
 My plans in a nutshell
   Beaters     Solenoids   Detail
     Kick        2         (Kick 1 and 2)
@@ -41,7 +42,7 @@ My plans in a nutshell
     Cowbell     1         (No more cowbell!)
     ----------------------------------------
     Toatal     16
-
+```
 ---
 
 I've unpublished the car door lock actuator version because it was latent AF and not hard hitting enough. I'm in the process of prototyping a lighter, simpler moving mechanism using [JF-0826B](https://www.google.com/search?q=JF-0826B+solenoid&rlz=1C5CHFA_enAU930AU930&oq=JF-0826B+solenoid&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDsyBggDEEUYPdIBCDQ2NDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8), 12V, 2A, 20N solenoids and light weight, 3D printed beater heads. I have two, quick, dirty, minimum voltage test videos here...
