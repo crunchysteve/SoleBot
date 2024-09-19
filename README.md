@@ -3,11 +3,16 @@
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW
 
 ---
-20240913: Over the next month I hope to upload some rudimentary Arduino code and begin testing the kick and snare mechs. If I'm happy with the result, I'll be proceeding with the project. If not, I'll look into what I can do, designwise, to make the project make me happy enough to proceed.
+10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
+![Video of a solenoid on my breadboard](./images/SolenoidTestRig.mov)
+![Video of a solenoid on my breadboard](./images/SolenoidDrummingTest.mov)
+I had no ***IDEA*** my snare could sound this toppy! :D
+
+Points to note: The sound quality isn't great, it's my iPhone SE inbuilt mic, this is just my first ever test of this method of striking a drum.
 
 ---
 
-I've unpublished the car door lock actuator version because it was latent and not hard hitting enough. I'm in the process of prototyping a lighter, simpler moving mechanism using [JF-0826B](https://www.google.com/search?q=JF-0826B+solenoid&rlz=1C5CHFA_enAU930AU930&oq=JF-0826B+solenoid&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDsyBggDEEUYPdIBCDQ2NDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8), 12V, 2A, 20N solenoids and light weight, 3D printed beater heads. I have two, quick, dirty, minimum voltage test videos here...
+I've unpublished the car door lock actuator version because it was latent AF and not hard hitting enough. I'm in the process of prototyping a lighter, simpler moving mechanism using [JF-0826B](https://www.google.com/search?q=JF-0826B+solenoid&rlz=1C5CHFA_enAU930AU930&oq=JF-0826B+solenoid&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRhAMgYIAhBFGDsyBggDEEUYPdIBCDQ2NDdqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8), 12V, 2A, 20N solenoids and light weight, 3D printed beater heads. I have two, quick, dirty, minimum voltage test videos here...
 
 ### KickBot
 [![KickBot with a solenoid](https://img.youtube.com/vi/OM4pcrr3s-8/0.jpg)](https://youtu.be/OM4pcrr3s-8)
