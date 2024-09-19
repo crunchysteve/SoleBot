@@ -6,7 +6,6 @@ Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI dru
 10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
 [![Video of a solenoid on my breadboard](https://img.youtube.com/vi/0h4IAesiM5w/0.jpg)](https://youtu.be/0h4IAesiM5w)
 [![Video of my solenoid drumming test](https://img.youtube.com/vi/Kuo8L1GTG-U/0.jpg)](https://youtu.be/Kuo8L1GTG-U)
-(Movies won't load, I'll toob them and fix this after dinner.)
 
 I had no ***IDEA*** my snare could sound this toppy! :D
 
