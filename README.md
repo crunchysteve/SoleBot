@@ -4,6 +4,9 @@
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW
 
 ---
+10240920:- Now running 2 beaters at once and the test program can play multiple solenoids across a basic 4 piece kit from an Arduino UNO. MIDI will be added soon.
+
+[![Like 2 sticks playing a practice drill!](https://img.youtube.com/vi/GSSUouHyVOM/0.jpg)](https://youtu.be/GSSUouHyVOM)
 
 10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
 
