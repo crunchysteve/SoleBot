@@ -1,4 +1,7 @@
-use <snareClamp.scad>
+use <drumClamp.scad>
+
+//  Currently, all dimensions are solely for my tiny "kiddy kit."
+//  I cheat and reuse the drumClamp bracket for the solenoid mount here.
 
 translate([-2,0,0]) base();
 translate([0,0,6]) riser();
