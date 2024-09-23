@@ -4,6 +4,10 @@
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW
 
 ---
+10240923:- 
+
+Both my printers have shat their brand new hotends after about 5 prints each. I may just redesign the mechanical parts for wooden and aluminium options to suit a range of makers' tools while I try to diagnose why a high flow, high temperature hotend would clog and heat creep worse than a cheap nasty.
+
 10240920:- Now running 2 beaters at once and the test program can play multiple solenoids across a basic 4 piece kit from an Arduino UNO. MIDI will be added soon.
 
 [![Like 2 sticks playing a practice drill!](https://img.youtube.com/vi/GSSUouHyVOM/0.jpg)](https://youtu.be/GSSUouHyVOM)
