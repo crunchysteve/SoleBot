@@ -31,7 +31,9 @@
   This preamble must always remain at the head of all 3d models and source code.
 */
 
-#include pins.h
+#include "pins.h"
+
+#include <MIDI.h>
 
 void setup(){
 
