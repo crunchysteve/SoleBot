@@ -1,33 +1,34 @@
 /*
-  Circuitry Test Program
+  MIDI Driven Drumbot
   ©2024 Crunchysteve
   ----------------------
-  This code is a basic test program to validate that the solenoids all work. It's quck-and-dirty, blocking
-  code that does one thing, plays every instrument at least once in the pattern and it's pretty annoying
-  after a few bars. It's intended to prove the hardware works, nothing more. A basic MIDI driven project will 
-  be added to this repo soon. The aim of that next step will be to create an Arduino application that can be 
-  adapted to a wide range of drum and percussion kits, including multiple beaters on single drums for advanced
-  expression, natural playing features (such as having some beaters override others, a real drummer has 2 arms
-  and 2 legs - left stick cant hit the snare and hi-hat at the same time) and maybe some natural rebound 
-  effects for things like crushed rolls.
+  This code will be the MIDI driven heart of SoléBot, the solenoid driven drumbot. 
 
-  Dynamics are provided by using analogWrite() on channels that need them, or digitalWrite() for the channels
-  that don't, taking the value of each field of the array as as the drive value and kicking the 12v solenoid 
-  with 24v. The next step is to send drive to multiple solenoids, based on the MIDI note number corresponding 
-  to the drum they'll be fitted to, and to use MIDI velocity + 127 in analogWrite to generate soft to loud hits.
+  Dynamics are provided by using analogWrite() on channels that need them, or digitalWrite() for 
+  the channels that don't, with a timed pulse to kick 12v solenoids with 24v for just long enough 
+  to never exceed 24W RMS applied to each solenoid, even at maximum tempo. The MIDI note number 
+  corresponding to each drum will determine which solenoid operates, while MIDI velocity + 127 
+  applied to analogWrite() on the PWM outputs will generate soft to loud hits.
 
-  This code will run on almost any micro, but the pins are setup for an Arduino Uno or Nano. Use a dual AOD4184
-  MOSFET module, such as this one, https://core-electronics.com.au/mosfet-power-switch-module.html , to drive
-  each solenoids. I'm using JF-0826B 12v/2A 20N solenoids and, because of the light duty cycle, I run them from
-  24V via the MOSTFET boards. I haven't tried higher than 30v yet, but neither Solenoids nor the MOSFETS run hot 
-  at 30v, even when run for extended periods.
+  This code will run on almost any micro, but the pins are setup for an Arduino Uno or Nano. 
+  Use a dual AOD4184 MOSFET module, such as this one, 
+    https://core-electronics.com.au/mosfet-power-switch-module.html, to drive each solenoid.
+
+  I'm using JF-0826B 12v/2A 20N solenoids and, because of the light duty cycle, I run them from
+  24V via the MOSFET boards. I haven't tried higher than 30v yet, but neither Solenoids nor the 
+  MOSFETS run hot at 30v, even when run for extended periods. Non-blocking timing will be used to 
+  pulse PWM drive just long enough to get the beater within a millimetre of the drum skin.
   
-  All code, including the OpenSCAD bracket files, are hosted on https://github.com/crunchysteve/Solebot
-  The My OpenSCAD models are also hosted here https://www.thingiverse.com/thing:6771931 without without C code.
+  All code, including C code and the OpenSCAD bracket 3D files, are hosted on
+    https://github.com/crunchysteve/Solebot while,
+  the OpenSCAD models are also hosted here 
+    https://www.thingiverse.com/thing:6771931 without without C code.
   
-  This code is copyright ©2024 Crunchysteve and is available for use or modification under an MIT licence, 
-  except for commercial use, whereupon the author would appreciate a percentage of device sales in exchange 
-  for a commercial licence for the manufacturer to use this project commercially.
+  This code is copyright ©2024 Crunchysteve and is available for use or modification under an MIT 
+  licence, except for commercial use, whereupon the author would appreciate a percentage of device 
+  sales in exchange for any licence for manufacturing this project commercially.
+
+  This preamble must always remain at the head of all 3d models and source code.
 */
 
 // define output pins

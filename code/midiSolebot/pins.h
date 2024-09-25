@@ -31,12 +31,17 @@
   This preamble must always remain at the head of all 3d models and source code.
 */
 
-#include pins.h
-
-void setup(){
-
-}
-
-void loop(){
-    
-}
+#ifndef PINS_H
+    #define PINS_H
+        #define KICK 3      //  kick drum output on pin 3 - analog
+        #define CRSH 4      //  crash cymbal output on pin 4 - digital
+        #define SNRE 5      //  snare drum output on pin 5 - analog
+        #define HHAT 6      //  HiHat cymbal beater output on pin 6 - analog
+        #define HOPN 7      //  top hat cymbal lifter output on pin 7 - digital
+        #define HCLS 8      //  bottom hat cymbal lifter output on pin 8 - digital
+        #define RTOM 9      //  rack tom output on pin 9 - analog
+        #define FTOM 10     //  floor tom output on pin 10 - analog
+        #define RIDE 11     //  ride cymbal output on pin 11 - analog
+        #define CBEL 12     //  cowbell or clave output on pin 12 - digital
+        #define LED  13     //  Will flash the LED every quaternote from MIDI clock
+#endif
