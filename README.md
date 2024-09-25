@@ -3,6 +3,8 @@
 # SoléBot
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat it's drums.
 
+![Simple four-piece kit layout, kick drum beater riser missing from shot](https://github.com/crunchysteve/SoleBot/blob/main/images/drumset.jpg)
+
 ---
 10240923:- Both my printers have decided to shit their brand new hotends after about 5 prints each. I may just redesign the mechanical parts for wooden and aluminium options to suit a range of makers' tools while I try to diagnose why a high flow, high temperature hotend would clog and heat creep worse than a cheap nasty. Meanwhile, while I await new parts, here is a design for aluminium versions of the solenoid brackets. These may be closer to a universal fit than the printed prototypes, too.
 
