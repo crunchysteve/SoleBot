@@ -14,6 +14,11 @@
         instrument and greater nuance. (eg left stick, right stick.)
   
   3. Begin development of a controller and settings memory board using [ESP32-2432S028R "Cheap Yellow Display"](https://github.com/witnessmenow/ESP32-Cheap-Yellow-Display) module and [LVGL GUI library](https://github.com/lvgl/lvgl).
+  
   4. If not burned out by then, develop robotic bass and...
-  5. ...robotic keys player.
-  6. Make more music while maintaining a more relaxed development cycle
+  
+  5. ...a robotic keys player.
+  
+  6. Want more? Add a [feature request](https://github.com/crunchysteve/SoleBot/discussions/categories/feature-requests) on the discussion board or as an [issue](https://github.com/crunchysteve/SoleBot/issues).
+  
+  7. Make more music while maintaining a more relaxed development cycle
