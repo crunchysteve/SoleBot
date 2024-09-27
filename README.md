@@ -28,8 +28,10 @@ Other parts needed will be screws and washers of various sizes (currently M3) an
 
 Help with modifying parts designs to more universal dimensions, across a broud range of kits and brands and making this parametric and easily changed, as well as translating the OpenSCAD designs to FreeCAD, would be greatly appreciated. Remember, this is a free, open source project, there's little point translating to paid or subscription software and hosting it here. Once it's in FreeCAD, it can be exported to commercial platforms and OpenSCAD exports to accessible formats, too.
 
----
-10240923:- Both my printers have decided to shit their brand new hotends after about 5 prints each. I may just redesign the mechanical parts for wooden and aluminium options to suit a range of makers' tools while I try to diagnose why a high flow, high temperature hotend would clog and heat creep worse than a cheap nasty. Meanwhile, while I await new parts, here is a design for aluminium versions of the solenoid brackets. These may be closer to a universal fit than the printed prototypes, too.
+<!--
+10240923:- Both my printers have decided to shit their brand new hotends after about 5 prints each. I may just redesign the mechanical parts for wooden and aluminium options to suit a range of makers' tools while I try to diagnose why a high flow, high temperature hotend would clog and heat creep worse than a cheap nasty. Meanwhile, while I await new parts, -->
+
+Here is a design for aluminium versions of the solenoid brackets. These may be closer to a universal fit than the printed prototypes, too.
 
 ![drumBracketParts](https://github.com/user-attachments/assets/1f792c37-387c-4307-ad32-f42957ae3051)
 ![drumBracketAssembled](https://github.com/user-attachments/assets/cf3dc659-a84e-4dcf-82a1-357d19f53589)
@@ -42,7 +44,7 @@ Help with modifying parts designs to more universal dimensions, across a broud r
 
 [![Like 2 sticks playing a practice drill!](https://img.youtube.com/vi/GSSUouHyVOM/0.jpg)](https://youtu.be/GSSUouHyVOM)
 
-10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
+<!-- 10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
 
 [![Video of a solenoid on my breadboard](https://img.youtube.com/vi/0h4IAesiM5w/0.jpg)](https://youtu.be/0h4IAesiM5w)
 [![Video of my solenoid drumming test](https://img.youtube.com/vi/Kuo8L1GTG-U/0.jpg)](https://youtu.be/Kuo8L1GTG-U)
@@ -103,6 +105,7 @@ OpenSCAD code (and STL files) for the various brackets posted now and preliminar
 The aim is to have a central controller that will be fed a MIDI signal from a dram machine, sequencer or DAW. That controller will communicate with sub controllers for each drum, controlling the 3 mechs for the snare (left stick, right stick, rim shot) after translating snare drum MIDI signals. The main controller is likely to be a an ESP32 powered "Cheap Yellow Display" as this gives the project the option to only require a single MIDI cable (to the controller), a daisychained 3 wire power supply (24v, 9v & gnd) to all components and internal communication with each drum's mechs via wireless protocols.
 
 The beater mechs, to maximise striking power, will be pulsed with 24v for a MIDI 127 velocity, but the duty cycle will be managed to never exceed 50% at 4s on 285BPM, keeping the RMS power to the solenoids under 24W, even though the pulses will be 96W peak to peak. Driving the beater solenoids from the microcontrollers will be via boolean AND of pulse-on and PWM to create velocity between 1 and 127. (5 to 12 volts RMS or 0.8W to 24W RMS based on duty cycle management.) This boolean AND function will be handled calling analogWrite(PIN,VELOCITY,DURATION), where PIN is the output pin to a solenoid driver board, VELOCITY is MIDI velocity multiplied by 2 and DURATION is the maximum duration of the PWM pulse to stay within the RMS safe duty cycle at VELOCITY = 255.
+-->
 
 This approach has been tested in an iCircuit simulation, and seems to work well, as per this proof of concept video. This was an early test, before sourcing the MOSFET modules.
 
