@@ -33,22 +33,36 @@
 
 #ifndef PINS_H
     #define PINS_H
+      //  Define output pins for each percussion
+        #define CLCK 2    /* Click or count with sticks */
+        #define KICK 3    /* Kick drum */
+        #define CRSH 4    /* Crash cymbal */
+        #define SNRE 5    /* Snare drum */
+        #define HHAT 6    /* Hi hat stick drive */
+        #define HOPN 7    /* Hi hat top lift (open hat) */
+        #define HCLS 8    /* Hi hat bottom lift (closed hat) */
+        #define RTOM 9    /* Rack tom */
+        #define FTOM 10   /* Floor tom */
+        #define RIDE 11   /* Ride cymbal */
+        #define CBEL 12   /* Cow bell or woodblock */
       //  The fields in each drum represent...
-      //  MIDI note number, output pin, analog/digital out, if out has been played and at what time.
+      //  MIDI note number, output pin, whether analog or digital out, 
+      //                                whether out has been played and at what time.
         byte DRUMS[][5] = {
-                        {31,2,0,0,0},   /* Stick Click, pin 2, digital, triggered, ms */
-                        {36,3,1,0,0},   /* Kick Drum, pin 3, analog, triggered, ms */
-                        {49,4,0,0,0},   /* Crash Cymbal, pin 4, digital, triggered, ms */
-                        {38,5,1,0,0},   /* Snare Drum, pin 5, analog, triggered, ms */
-                        {44,6,1,0,0},   /* HiHat hit (half open), pin 6, analog, triggered, millis() */
-                        {46,7,0,0,0},   /* HiHat hit (top lift open), pin 7, digital, 
-                                                                                triggered, millis() */
-                        {42,8,0,0,0},   /* HiHat hit (bottom lift close), pin 8, digital, 
-                                                                                triggered, millis() */
-                        {36,9,1,0,0},   /* Rack Tom, pin 9, analog, triggered, ms */
-                        {43,10,1,0,0},  /* Floor Tom, pin 10, analog, triggered, ms */
-                        {51,11,1,0,0},  /* Ride Cymbal, pin 11, analog, triggered, ms */
-                        {56,12,0,0,0}  /* Cowbell, pin 12, digital, triggered, ms */
-                      };
-        byte LED = 13;          //  Will (eventually) flash the LED every quaternote from MIDI clock
+          {STICK_CLICK,CLCK,0,0,0},   /* Stick Click, pin 2, digital, triggered, ms */
+          {KICK_DRUM,KICK,1,0,0},     /* Kick Drum, pin 3, analog, triggered, ms */
+          {CRASH_CYMBAL,CRSH,0,0,0},  /* Crash Cymbal, pin 4, digital, triggered, ms */
+          {SNARE_DRUM,SNRE,1,0,0},    /* Snare Drum, pin 5, analog, triggered, ms */
+          {HI_HAT_HALF,HHAT,1,0,0},   /* HiHat hit (half open), pin 6, analog, 
+                                                                          triggered, millis() */
+          {HI_HAT_OPEN,HOPN,0,0,0},   /* HiHat hit (top lift open), pin 7, digital, 
+                                                                          triggered, millis() */
+          {HI_HAT_CLOSED,HCLS,0,0,0}, /* HiHat hit (bottom lift close), pin 8, digital, 
+                                                                          triggered, millis() */
+          {HIGH_MID_TOM,RTOM,1,0,0},  /* Rack Tom, pin 9, analog, triggered, ms */
+          {FLOOR_TOM_1,FTOM,1,0,0},   /* Floor Tom, pin 10, analog, triggered, ms */
+          {RIDE_CYMBAL,RIDE,1,0,0},   /* Ride Cymbal, pin 11, analog, triggered, ms */
+          {COWBELL,CBEL,0,0,0}        /* Cowbell, pin 12, digital, triggered, ms */
+        };
+        byte LED = 13;             //  Will (eventually) flash the LED every quaternote from MIDI clock
 #endif

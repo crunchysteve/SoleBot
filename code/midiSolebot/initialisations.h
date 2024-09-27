@@ -33,9 +33,10 @@
 
 #ifndef INITIALISATIONS_H
     #define INITIALISATIONS_H
+
         //  Timer duration for maximum beat pulsewidth
         #define BEAT_PULSE_DURATION 100
-        
+
         //  Initialise output pins - while most are used as analog pins, this function 
         //  ensures all are writable as digital outputs for zeroing in crash/save scenarios.
         void initialise_outs(int start, int stop){
