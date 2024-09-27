@@ -38,33 +38,34 @@ No.     Name                  No.       Name
 
 44	Hi-Hat Foot           76	High Woodblock
 
-45	Low Tom	              77	Low Woodblock
+45	Low Tom               77	Low Woodblock
 
-46	Hi-Hat Open	          78	Cuica High
+46	Hi-Hat Open           78	Cuica High
 
-47	Low-Mid Tom	          79	Cuica Low
+47	Low-Mid Tom           79	Cuica Low
 
-48	High-Mid Tom	        80	Triangle Mute
+48	High-Mid Tom          80	Triangle Mute
 
-49	Crash Cymbal	        81	Triangle Open
+49	Crash Cymbal          81	Triangle Open
 
-50	High Tom	            82	Shaker
+50	High Tom              82	Shaker
 
-51	Ride Cymbal	          83	Sleigh Bell
+51	Ride Cymbal           83	Sleigh Bell
 
-52	China Cymbal	        84	Bell Tree
+52	China Cymbal          84	Bell Tree
 
-53	Ride Bell	            85	Castanets
+53	Ride Bell             85	Castanets
 
-54	Tambourine	          86	Surdu Dead Stroke
+54	Tambourine            86	Surdu Dead Stroke
 
-55	Splash cymbal	        87	Surdu
+55	Splash cymbal         87	Surdu
 
-56	Cowbell	              91	Snare Drum Rod
+56	Cowbell               91	Snare Drum Rod
 
-57	Crash Cymbal 2	      92	Ocean Drum
+57	Crash Cymbal 2        92	Ocean Drum
 
-58	Vibraslap	            93	Snare Drum Brush
+58	Vibraslap             93	Snare Drum Brush
 
 59	Ride Cymbal 2
+
 ```
