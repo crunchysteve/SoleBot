@@ -1,7 +1,8 @@
 ## General MIDI Percussion note numbers
 
 ``` text
-MIDI Note Number	Note Type	MIDI Note Number	Note Type
+MIDI                      MIDI
+No. Note Name             N0. Note Name
 27	Laser                 60	High Bongo
 
 28	Whip                  61	Low Bongo
