@@ -105,9 +105,9 @@ OpenSCAD code (and STL files) for the various brackets posted now and preliminar
 The aim is to have a central controller that will be fed a MIDI signal from a dram machine, sequencer or DAW. That controller will communicate with sub controllers for each drum, controlling the 3 mechs for the snare (left stick, right stick, rim shot) after translating snare drum MIDI signals. The main controller is likely to be a an ESP32 powered "Cheap Yellow Display" as this gives the project the option to only require a single MIDI cable (to the controller), a daisychained 3 wire power supply (24v, 9v & gnd) to all components and internal communication with each drum's mechs via wireless protocols.
 
 The beater mechs, to maximise striking power, will be pulsed with 24v for a MIDI 127 velocity, but the duty cycle will be managed to never exceed 50% at 4s on 285BPM, keeping the RMS power to the solenoids under 24W, even though the pulses will be 96W peak to peak. Driving the beater solenoids from the microcontrollers will be via boolean AND of pulse-on and PWM to create velocity between 1 and 127. (5 to 12 volts RMS or 0.8W to 24W RMS based on duty cycle management.) This boolean AND function will be handled calling analogWrite(PIN,VELOCITY,DURATION), where PIN is the output pin to a solenoid driver board, VELOCITY is MIDI velocity multiplied by 2 and DURATION is the maximum duration of the PWM pulse to stay within the RMS safe duty cycle at VELOCITY = 255.
--->
 
 This approach has been tested in an iCircuit simulation, and seems to work well, as per this proof of concept video. This was an early test, before sourcing the MOSFET modules.
 
 [![PWM ANDed with True to provide pulsed PWM for strike and velocity control on a single output](https://img.youtube.com/vi/VhJ9suvsufc/0.jpg)](https://youtu.be/VhJ9suvsufc)
 
+-->
