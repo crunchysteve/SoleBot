@@ -4,6 +4,7 @@
   ----------------------
   This code will be the MIDI driven heart of SoléBot, the solenoid driven drumbot. 
 
+
   Dynamics are provided by using analogWrite() on channels that need them, or digitalWrite() for 
   the channels that don't, with a timed pulse to kick 12v solenoids with 24v for just long enough 
   to never exceed 24W RMS applied to each solenoid, even at maximum tempo. The MIDI note number 
