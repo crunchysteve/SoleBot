@@ -3,6 +3,10 @@
 # SoléBot
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat it's drums.
 
+As well as the SoléBot testTool.ino sketch, there's now a preliminary MIDI controlled sketch that should do relatively fast (microseconds) testing for MIDI inputs and triggering solenoid outputs from those inputs with drum value, note on, note off and note timeout, if note off signals are not sent for percussion from your drum machine or DAW. So, it's now possible to start playing around with making a robotic drummer with this project.
+
+Issues, suggestions (as an issue) and PRs are welcome. Next step will be to physically test this on actual hardware, rather than a simulation. That won't happen for a few days yet. Hey, life. Meanwhile, I've started working on a WIKI and will soon add some discussion groups to the repo.
+
 ![Simple four-piece kit layout, kick drum beater riser missing from shot](https://github.com/crunchysteve/SoleBot/blob/main/images/drumset.jpg)
 
 *Fig. 1* - Early development photo of four-piece kit prototype.
