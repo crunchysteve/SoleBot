@@ -2,7 +2,7 @@
 
 ``` text
 MIDI                      MIDI
-No. Note Name             N0. Note Name
+No. Note Name             No. Note Name
 27	Laser                 60	High Bongo
 
 28	Whip                  61	Low Bongo
