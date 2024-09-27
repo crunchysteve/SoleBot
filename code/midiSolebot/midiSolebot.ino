@@ -54,6 +54,7 @@ void handleNoteOn(byte inChannel, byte inNote, byte inVelocity){
   if(inChannel == 10){
     for(int i=0; i < 11; i++){
       if(DRUMS[i][0] == inNote){
+        digitalWrite(LED,HIGH);
         if(DRUMS[i][2] == 1){
           analogWrite(DRUMS[i][1],inVelocity + 128);
           DRUMS[i][3] = 1;
@@ -63,6 +64,7 @@ void handleNoteOn(byte inChannel, byte inNote, byte inVelocity){
           DRUMS[i][3] = 1;
           DRUMS[i][4] = millis();
         }
+        digitalWrite(LED,LOW);
       }
     }
   }
@@ -72,6 +74,7 @@ void handleNoteOff(byte inChannel, byte inNote, byte inVelocity){
   if(inChannel == 10){
     for(int i=0; i < 11; i++){
       if(DRUMS[i][0] == inNote){
+        digitalWrite(LED,HIGH);
         if(DRUMS[i][2] == 1){
           analogWrite(DRUMS[i][1],0);
           DRUMS[i][3] = 0;
@@ -81,6 +84,7 @@ void handleNoteOff(byte inChannel, byte inNote, byte inVelocity){
           DRUMS[i][3] = 0;
           // will start a pulse length timer here for main loop checking
         }
+        digitalWrite(LED,LOW);
       }
     }
   }
@@ -89,6 +93,7 @@ void handleNoteOff(byte inChannel, byte inNote, byte inVelocity){
 void handleNoteTimeout(){
   for(int i=0; i < 11; i++){
     if(DRUMS[i][3] && millis() >= DRUMS[i][4] + BEAT_PULSE_DURATION){
+      digitalWrite(LED,HIGH);
       if(DRUMS[i][2] == 1){
         analogWrite(DRUMS[i][1],0);
         DRUMS[i][3] = 0;
@@ -96,6 +101,7 @@ void handleNoteTimeout(){
         digitalWrite(DRUMS[i][1],0);
         DRUMS[i][3] = 0;
       }
+      digitalWrite(LED,LOW);
     }
   }
 }
