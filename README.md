@@ -11,6 +11,23 @@ Issues, suggestions (as an issue) and PRs are welcome. Next step will be to phys
 
 *Fig. 1* - Early development photo of four-piece kit prototype.
 
+## Parts Outline
+
+Currently, there are solenoid mount designs for snare and toms ("beater arms") in both 3D printed plastic and aluminium, as well as a 3D printed design for the kick drum beater riser. None of these sketches are parametric nor graphical CAD files yet. You can find them in the "scadFiles" directory. The kick drum beater riser should work on larger kick drums than mine, but mine is a 16" so, if yours is a 20", it's probably too short for you. You need the "DrumClamp.scad" file to be in the same directory on your workstation as the "KickRiser.scad" file as this file calls the former file as an inclusion. The excess parts of the drum clamp are then differenced away, leaving the riser body and the solenoid mount. To make this part fit a larger drum, simply increase the z value of the translate command to bring the centre of the solenoid level with the centre of your kick drum.
+
+The file "beaters.scad" includes a stick tip shaped beater for toms, snare and other percussion, as well as a cylyndrical beater with a rounded face for the kick. If you like a hard, wood beater, print this in PLA, or ASA, PLA flex or similar for a softer beater. These beaters screw directly on the thread that holds the solenoid's retainer nut and replaces that nut outright.
+
+Here is the complete list of OpenSCAD files for printing or making the brackets so far...
+1. beaters.scad - OpenSCAD custom functions for creating STL files for multiple tips or a kick drum beater,
+2. drumBracket.scad - dimensioned drawing for creating an aluminium bracket for clamping a solenoid and beater tip to a pressed metal drum ring,
+3. drumClamp.scad - dimensioned drawing for creating an 3D printed or CNC machined bracket for clamping a solenoid and beater tip to a pressed metal drum ring,
+4. kickRiser.scad - dimensioned drawing for creating an 3D printed bracket for place a solenoid and beater before the beaten skin of a kick drum,
+5. solenoids.scad - currently only holds a custom OpenSCAD function for a dummy JF-1250B solenoid. Other solenoids will be added as I source and find them suitable.
+
+Other parts needed will be screws and washers of various sizes (currently M3) and probably heat insert nuts for where the screws are currently driven directly into interference fit holes in my prototypes.
+
+Help with modifying parts designs to more universal dimensions, across a broud range of kits and brands and making this parametric and easily changed, as well as translating the OpenSCAD designs to FreeCAD, would be greatly appreciated. Remember, this is a free, open source project, there's little point translating to paid or subscription software and hosting it here. Once it's in FreeCAD, it can be exported to commercial platforms and OpenSCAD exports to accessible formats, too.
+
 ---
 10240923:- Both my printers have decided to shit their brand new hotends after about 5 prints each. I may just redesign the mechanical parts for wooden and aluminium options to suit a range of makers' tools while I try to diagnose why a high flow, high temperature hotend would clog and heat creep worse than a cheap nasty. Meanwhile, while I await new parts, here is a design for aluminium versions of the solenoid brackets. These may be closer to a universal fit than the printed prototypes, too.
 
