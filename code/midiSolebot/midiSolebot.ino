@@ -31,14 +31,84 @@
   This preamble must always remain at the head of all 3d models and source code.
 */
 
+//  Project Libraries
 #include "pins.h"
+#include "initialisations.h"
 
+//  Standard Libraries
 #include <MIDI.h>
+// #include <midi_UsbTransport.h>
+// MIDI_CREATE_DEFAULT_INSTANCE();
+#include <SoftwareSerial.h>
+
+// int pinStates[][] = {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}};
+
+using Transport = MIDI_NAMESPACE::SerialMIDI<SoftwareSerial>;
+int rxPin = 18;
+int txPin = 19;
+SoftwareSerial mySerial = SoftwareSerial(rxPin, txPin);
+Transport serialMIDI(mySerial);
+MIDI_NAMESPACE::MidiInterface<Transport> MIDI((Transport&)serialMIDI);
+
+void handleNoteOn(byte inChannel, byte inNote, byte inVelocity){
+  if(inChannel == 10){
+    for(int i=0; i < 11; i++){
+      if(DRUMS[i][0] == inNote){
+        if(DRUMS[i][2] == 1){
+          analogWrite(DRUMS[i][1],inVelocity + 128);
+          DRUMS[i][3] = 1;
+          DRUMS[i][4] = millis();
+        } else {
+          digitalWrite(DRUMS[i][1],1);
+          DRUMS[i][3] = 1;
+          DRUMS[i][4] = millis();
+        }
+      }
+    }
+  }
+}
+
+void handleNoteOff(byte inChannel, byte inNote, byte inVelocity){
+  if(inChannel == 10){
+    for(int i=0; i < 11; i++){
+      if(DRUMS[i][0] == inNote){
+        if(DRUMS[i][2] == 1){
+          analogWrite(DRUMS[i][1],0);
+          DRUMS[i][3] = 0;
+          // will start a pulse length timer here for main loop checking
+        } else {
+          digitalWrite(DRUMS[i][1],0);
+          DRUMS[i][3] = 0;
+          // will start a pulse length timer here for main loop checking
+        }
+      }
+    }
+  }
+}
+
+void handleNoteTimeout(){
+  for(int i=0; i < 11; i++){
+    if(DRUMS[i][3] && millis() >= DRUMS[i][4] + BEAT_PULSE_DURATION){
+      if(DRUMS[i][2] == 1){
+        analogWrite(DRUMS[i][1],0);
+        DRUMS[i][3] = 0;
+      } else {
+        digitalWrite(DRUMS[i][1],0);
+        DRUMS[i][3] = 0;
+      }
+    }
+  }
+}
 
 void setup(){
-
+    Serial.begin(115200);
+    initialise_outs(DRUMS[0][1],DRUMS[10][1]);  //  call output pin initialisations
+    MIDI.setHandleNoteOn(handleNoteOn);
+    MIDI.setHandleNoteOff(handleNoteOff);
+    MIDI.begin(10);
 }
 
 void loop(){
-    
+    MIDI.read();
+    handleNoteTimeout();
 }

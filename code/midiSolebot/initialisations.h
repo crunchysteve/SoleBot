@@ -31,24 +31,17 @@
   This preamble must always remain at the head of all 3d models and source code.
 */
 
-#ifndef PINS_H
-    #define PINS_H
-      //  The fields in each drum represent...
-      //  MIDI note number, output pin, analog/digital out, if out has been played and at what time.
-        byte DRUMS[][5] = {
-                        {31,2,0,0,0},   /* Stick Click, pin 2, digital, triggered, ms */
-                        {36,3,1,0,0},   /* Kick Drum, pin 3, analog, triggered, ms */
-                        {49,4,0,0,0},   /* Crash Cymbal, pin 4, digital, triggered, ms */
-                        {38,5,1,0,0},   /* Snare Drum, pin 5, analog, triggered, ms */
-                        {44,6,1,0,0},   /* HiHat hit (half open), pin 6, analog, triggered, millis() */
-                        {46,7,0,0,0},   /* HiHat hit (top lift open), pin 7, digital, 
-                                                                                triggered, millis() */
-                        {42,8,0,0,0},   /* HiHat hit (bottom lift close), pin 8, digital, 
-                                                                                triggered, millis() */
-                        {36,9,1,0,0},   /* Rack Tom, pin 9, analog, triggered, ms */
-                        {43,10,1,0,0},  /* Floor Tom, pin 10, analog, triggered, ms */
-                        {51,11,1,0,0},  /* Ride Cymbal, pin 11, analog, triggered, ms */
-                        {56,12,0,0,0}  /* Cowbell, pin 12, digital, triggered, ms */
-                      };
-        byte LED = 13;          //  Will (eventually) flash the LED every quaternote from MIDI clock
+#ifndef INITIALISATIONS_H
+    #define INITIALISATIONS_H
+        //  Timer duration for maximum beat pulsewidth
+        #define BEAT_PULSE_DURATION 100
+        
+        //  Initialise output pins - while most are used as analog pins, this function 
+        //  ensures all are writable as digital outputs for zeroing in crash/save scenarios.
+        void initialise_outs(int start, int stop){
+            for(int i = start; i <= stop; i++){
+                pinMode(i,OUTPUT);
+                digitalWrite(i,LOW);
+            }
+        }
 #endif
