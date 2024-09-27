@@ -1,6 +1,6 @@
 ## General MIDI Percussion note numbers
 
-
+``` text
 MIDI Note Number	Note Type	MIDI Note Number	Note Type
 27	Laser                 60	High Bongo
 
@@ -65,3 +65,4 @@ MIDI Note Number	Note Type	MIDI Note Number	Note Type
 58	Vibraslap	            93	Snare Drum Brush
 
 59	Ride Cymbal 2
+```
