@@ -3,6 +3,7 @@
 ``` text
 MIDI                          MIDI
 No.     Name                  No.       Name
+--------------------------------------------------
 27	Laser                 60	High Bongo
 
 28	Whip                  61	Low Bongo
