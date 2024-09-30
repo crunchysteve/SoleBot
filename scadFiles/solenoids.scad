@@ -1,4 +1,6 @@
-solenoid(type="JF-1250B");
+solenoid(type="JF-1250B");          //  show JF-1250B module
+translate([60,0,0]) solenoid();     //  show JF-0826B (default) module
+translate([0,70,0]) solenoid();     //  show JF-0826B activated
 
 module solenoid(position=0,type="JF0826B"){
     if(type=="JF-0826B"){
