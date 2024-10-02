@@ -1,0 +1,41 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=SoleBotPCBV1.0∂
+*Date=01:50:30
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d32
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;;115.168;-21.5459;90;Bottom;Out 3 - Kick Beater
+2;;screwterminal-3.5mm-3_lock.007s;57.6775;-30.2989;180;Bottom;RX  TX  G
+3;;;90.3836;-21.5457;90;Bottom;Out 2 - Stick Click
+4;;;138.955;-66.8048;-90;Bottom;Out 7 - Top Hat Up
+5;;;66.0425;-66.4808;-90;Bottom;Out 10 -Floor Tom
+6;;;163.147;-67.2304;-90;Bottom;Out 6 - Hat Stick
+7;;;150.989;-20.8295;0;Bottom;Hole3
+8;;;90.3836;-66.6078;-90;Bottom;Out 9 - Rack Tom
+9;;;57.0856;-20.8295;0;Bottom;Hole4
+10;;;12.0176;-66.5872;-90;Bottom;Out 12 - Cowbell
+11;;;116.582;-44.4337;0;Bottom;TXT1
+12;;;150.989;-65.8084;0;Bottom;Hole2
+13;;400 mil [THT];162.233;-40.7543;0;Bottom;L1
+14;220;THT;162.076;-46.0319;0;Bottom;©2024 Crunchy
+15;;[THT];40.1578;-15.6659;90;Bottom;Reset
+16;;THT;23.1544;-18.9306;-90;Bottom;J1
+17;;;138.955;-21.5459;90;Bottom;Out 4 - Crash Stick
+18;;;41.9466;-66.4966;-90;Bottom;Out 11 - Ride Cymbal
+19;;screwterminal-3.5mm-3_lock.007s;6.90083;-8.34964;-90;Bottom;G 5V 24V
+20;;;115.168;-66.8051;-90;Bottom;Out 8 - Bottom Hat Up
+21;;;116.797;-41.0839;0;Bottom;TXT2
+22;;;24.7496;-31.5257;90;Bottom;Arduino Nano
+23;;;27.0999;-65.8084;0;Bottom;Hole1
+24;;3 mm [THT];20.1607;-12.9183;90;Bottom;LED1
+25;220;THT;27.8314;-9.27661;90;Bottom;220Ω
+26;;;163.147;-21.5459;90;Bottom;Out 5 - Snare Stick
