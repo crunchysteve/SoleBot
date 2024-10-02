@@ -7,7 +7,9 @@ Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI dru
 
 ***NEW*: Preliminary circuit board design for a single beater per drum, 4 piece kit. Now updated. Also, the hi-hat mech is progressing. Tonight, I prototyped it using Meccano. Only the top but, it proves the concept. Now to design the dual free clutch**
 
-[![Prototyping one of the hi-hat cymbal lift arms in Meccano](https://img.youtube.com/vi/i6Wa3Kwags4/0.jpg) Prototyping one of the hi-hat cymbal lift arms in Meccano. it's a bit janky, but it makes me confident to proceed further on this path](https://youtu.be/i6Wa3Kwags4)
+Prototyping one of the hi-hat cymbal lift arms in Meccano. it's a bit janky, but it makes me confident to proceed further on this path.
+
+[![Prototyping one of the hi-hat cymbal lift arms in Meccano](https://img.youtube.com/vi/i6Wa3Kwags4/0.jpg)](https://youtu.be/i6Wa3Kwags4)
 
 As well as the SoléBot testTool.ino sketch, there's now a preliminary MIDI controlled sketch that should do relatively fast (microseconds) testing for MIDI inputs and triggering solenoid outputs from those inputs with drum value, note on, note off and note timeout, if note off signals are not sent for percussion from your drum machine or DAW. So, it's now possible to start playing around with making a robotic drummer with this project.
 
