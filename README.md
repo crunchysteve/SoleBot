@@ -3,6 +3,11 @@
 ### [Discussions](https://github.com/crunchysteve/SoleBot/discussions) • [Wiki (Work In Progress)](https://github.com/crunchysteve/SoleBot/wiki) • [Thingiverse](https://www.thingiverse.com/thing:6771931)
 
 # SoléBot
+
+20241021: Just to let everybody know, waiting for some parts for the MIDI controller to arrive before I do anymore work on anything else. Beloved mother-in-law is dying and placing energies on helping the missis where I can, plus a few workshop housekeeping chores. Apologies for the limited/lack-of updates over the next few months.
+
+---
+
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat it's drums.
 
 ***NEW*: Preliminary circuit board design for a single beater per drum, 4 piece kit. Now updated. Also, the hi-hat mech is progressing. Tonight, I prototyped it using Meccano. Only the top but, it proves the concept. Now to design the dual free clutch**
