@@ -37,7 +37,7 @@ Here is the complete list of OpenSCAD files for printing or making the brackets 
 4. kickRiser.scad - dimensioned drawing for creating an 3D printed bracket for place a solenoid and beater before the beaten skin of a kick drum,
 5. solenoids.scad - currently only holds a custom OpenSCAD function for a dummy JF-1250B solenoid. Other solenoids will be added as I source and find them suitable. This week, I'll be adding the JF-1250B, 60N solenoid for the hi-hat lifter solenoid to this file, possibly a provisional mechanism for the hi-hats. One of these might be good for the kick drum, too!
 
-![hi-hat lifting solenoid compared to the drum beater solenoid](https://github.com/crunchysteve/SoleBot/tree/main/images/cymbalLifterNextToBeater.JPG)
+![hi-hat lifting solenoid compared to the drum beater solenoid](https://github.com/crunchysteve/SoleBot/blob/main/images/CymbalLifterNextToBeater.JPG)
 
 Other parts needed will be screws and washers of various sizes (currently M3) and probably heat insert nuts for where the screws are currently driven directly into interference fit holes in my prototypes.
 
