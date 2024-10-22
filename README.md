@@ -10,7 +10,7 @@
 
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat it's drums.
 
-***NEW*: Preliminary circuit board design for a single beater per drum, 4 piece kit. Now updated. Also, the hi-hat mech is progressing. Tonight, I prototyped it using Meccano. Only the top but, it proves the concept. Now to design the dual free clutch**
+Preliminary circuit board design for a single beater per drum, 4 piece kit. Now updated. Also, the hi-hat mech is progressing. Tonight, I prototyped it using Meccano. Only the top but, it proves the concept. Now to design the dual free clutch**
 
 Prototyping one of the hi-hat cymbal lift arms in Meccano. it's a bit janky, but it makes me confident to proceed further on this path.
 
