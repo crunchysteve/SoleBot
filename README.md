@@ -53,13 +53,13 @@ Here is a design for aluminium versions of the solenoid brackets. These may be c
 
 (OpenSCAD cad file in the relevant directory.)
 
----
+<!---
 
 10240920:- Now running 2 beaters at once and the test program can play multiple solenoids across a basic 4 piece kit from an Arduino UNO. MIDI will be added soon.
 
 [![Like 2 sticks playing a practice drill!](https://img.youtube.com/vi/GSSUouHyVOM/0.jpg)](https://youtu.be/GSSUouHyVOM)
 
-<!-- 10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
+10240919:- Initial success! And with video proof, to boot! Also, uploaded the simple Arduino test program, see "code" folder.
 
 [![Video of a solenoid on my breadboard](https://img.youtube.com/vi/0h4IAesiM5w/0.jpg)](https://youtu.be/0h4IAesiM5w)
 [![Video of my solenoid drumming test](https://img.youtube.com/vi/Kuo8L1GTG-U/0.jpg)](https://youtu.be/Kuo8L1GTG-U)
