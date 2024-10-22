@@ -1,6 +1,6 @@
 ## MIDI Control Board
 
-The MIDI control board for SoleBot consist of an Arduino Nano (or Uno, even a bare 328p chip if you know how to handle the bare beast) and 11 dual MOSFET DC power switch boards as solenoid drivers. The next version will also have MIDI in and through components. Here is the basic circuit diagram showing a single module on pin 9, which would is the rack tom, as per pins.h definition.
+The MIDI control board for SoleBot consist of an Arduino Nano (or Uno, even a bare 328p chip if you know how to handle the bare beast) and 11 dual MOSFET DC power switch boards as solenoid drivers. The next version will also have MIDI in and through components. Here is the basic circuit diagram showing a single module on pin 9, which is the rack tom, as per pins.h definition.
 
 ![Control Board Circuit (only one driver circuit shown)](https://github.com/crunchysteve/SoleBot/blob/main/images/CircuitDiagram.png)
 
