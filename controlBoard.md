@@ -2,7 +2,7 @@
 
 The MIDI control board for SoleBot consist of an Arduino Nano (or Uno, even a bare 328p chip if you know how to handle the bare beast) and 11 dual MOSFET DC power switch boards as solenoid drivers. The next version will also have MIDI in and through components. Here is the basic circuit diagram showing a single module on pin 9, which would is the rack tom, as per pins.h definition.
 
-![Control Board Circuit (only one driver circuit shown)](https://github.com/crunchysteve/SoleBot/blob/main/images/CircuitDiagram.png)
+[![Control Board Circuit (only one driver circuit shown)](https://github.com/crunchysteve/SoleBot/blob/main/images/CircuitDiagram.png)](https://core-electronics.com.au/mosfet-power-switch-module.html)
 
 The current Fritzing project and its exported Gerber file are designed to have an actual Nano and 11 dual MOSFET modules either hardwired or socketed for prototyping. The plan is to eventually design a board with MIDI interface, 328P chip and MOSFET drivers laid out on a custom board as descrete components. For my current, early prototype design, I'll hardwire a standard MIDI shield as my interface to my MIDI system as an external board. I have a large, plastic, electrical junction box for a housing that will take my 24v supply (stripped of its housing), supply fan, 5v buck converter, MIDI shield and custom control board, as well as leaving room outside for some pluggable terminal blocks, as shown below...
 
