@@ -38,11 +38,7 @@
 
 //  Standard Libraries
 #include <MIDI.h>
-// #include <midi_UsbTransport.h>
-// MIDI_CREATE_DEFAULT_INSTANCE();
 #include <SoftwareSerial.h>
-
-// int pinStates[][] = {{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0},{0,0}};
 
 using Transport = MIDI_NAMESPACE::SerialMIDI<SoftwareSerial>;
 int rxPin = 18;
