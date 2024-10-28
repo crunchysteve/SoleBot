@@ -1,6 +1,6 @@
 ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) ![[OpenSCAD](https://openscad.org)](https://github.com/crunchysteve/Solebot/blob/main/images/openscad.png?raw=true) ![PlatformIO](https://img.shields.io/badge/PlatformIO-%23222.svg?style=for-the-badge&logo=platformio&logoColor=%23f5822a) ![Arduino](https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white) ![Espressif](https://img.shields.io/badge/espressif-E7352C.svg?style=for-the-badge&logo=espressif&logoColor=white)
 
-### [Discussions](https://github.com/crunchysteve/SoleBot/discussions) • [Wiki (Work In Progress)](https://github.com/crunchysteve/SoleBot/wiki) • [Thingiverse](https://www.thingiverse.com/thing:6771931)
+### [Discussions](https://github.com/crunchysteve/SoleBot/discussions) • [Wiki (Work In Progress)](https://github.com/crunchysteve/SoleBot/wiki) • [Thingiverse](https://www.thingiverse.com/thing:6771931) [News](https://github.com/crunchysteve/SoleBot/discussions/categories/news)
 
 # SoléBot
 
