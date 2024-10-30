@@ -28,6 +28,8 @@ To date, the project consists of a hardware test program, a repeating, four-on-t
 
 A "motherboard" style circuit board has been designed but there are some small bugs with this already. On the imput side of the MOSFET driver boards, it's advised to connect all three data in and ground pins on the controller module to all three motherboard holes for input and ground, each. As this is primarily a prototype board to get a prototype kit running from my Alesis, I see no serious problems with using off-the-rack modules on a through-hole motherboard. Once the basic, minimal design is proven to work adequately, a more compact board, using discreet micro(s) (Atmel 328p or ATMega 2650 for more outputs), MOSFETs and supporting parts can be developed. Faster, higher bitdepth boards may reduce the random latencies of varying throughput, but those random latencies are the art introducing huamn feel to the playing. These older microcontrollers also help keep the cost down, improving accessibility to younger artists, who may not receive assistance from parents for "wasteful" things like music, but not yet in the workforce because of studies.
 
+![builtup motherboard for early prototype](https://github.com/crunchysteve/SoleBot/tree/main/images/MarkMothersboard.jpg)
+
 Yeah, I'm channelling aspects of my youth of *MANY* years ago. The struggle is still real today. Mums and dads everywhere still say, "[Get a haircut and get a real job.](https://www.youtube.com/watch?v=3w7CrxLj36I)" I've been guilty of this, sort of, with my own kids. Hey, you want the best for them and for them to be safe, OK.
 
 # Scope
