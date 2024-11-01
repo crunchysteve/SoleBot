@@ -50,3 +50,5 @@ If you want to help run the repo, pull, pull, pull successfully a few times. If 
 
 Cheers,
 Crunchy.
+
+![repaired prototype board](https://github.com/crunchysteve/SoleBot/blob/main/images/SoleBotBoard.png)
