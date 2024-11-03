@@ -10,7 +10,7 @@ The plan is to eventually design a board with MIDI interface, 328P chip and MOSF
 
 [![Jaycar pluggable terminal block)](https://github.com/crunchysteve/SoleBot/blob/main/images/HM3202_plug-socket-12-way-screw-terminal-strip_82612.png)](https://www.jaycar.com.au/plug-socket-12-way-screw-terminal-strip/p/HM3202)
 
-This kind of terminal block can handle 10A per carrier, more than enough for each solenoid, as the smaller 10N solenoids draw short pulses of 4A, when fed with a 24v output from the PSU, and the 60N solenoids rely on turns to generate their magnetic force from 720mA at 24 volts for their maximum 50% duty cycle at this voltage. The other advantage of this connection system is that the solenoid side (with the pins) can be cut into pairs for drive and ground, while the driver side (sockets) can be left intact and wired drive, ground, drive, ground, etc, making it easy to connect/disconnect the drum beaters with the control module. This terminal block system will be mounter on the rear of the controller box.
+This kind of terminal block can handle 10A per carrier, more than enough for each solenoid, as the smaller 10N solenoids draw short pulses of 4A, when fed with a 24v output from the PSU, and the 60N solenoids rely on turns to generate their magnetic force from 720mA at 24 volts for their maximum 50% duty cycle at this voltage. The other advantage of this connection system is that the solenoid side (with the pins) can be cut into pairs for drive and ground, while the driver side (sockets) can be left intact and wired drive, ground, drive, ground, etc, making it easy to connect/disconnect the drum beaters from the control module. This terminal block system will be mounter on the rear of the controller box.
 
 ## How the Controller Works
 
