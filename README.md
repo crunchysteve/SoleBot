@@ -12,7 +12,7 @@ As a semi-pro, live musician for close to 40 years of my 63 years alive, I've wa
 
 Hence, SoléBot, the solenoid operated drumming robot. The aim is to develop a multi-output control board that can drive solenoids to beat drums, cymbals and other percussion, as commanded by MIDI data from a drum machine or DAW. I envisage this control board being adaptable to other instruments, like bass guitar, too. I'll be occasionally demonstrating developments working on my youtube channel, too, in [this playlist](https://www.youtube.com/playlist?list=PLrngkZ75bHDKrJ51mYCRLDtqRJ-8iNQGl).
 
-[There's news](https://github.com/crunchysteve/SoleBot/discussions/8). I've now proven the electronics work with a simple four-on-the-floor, hard-coded drum beat, [testTool.ino](https://github.com/crunchysteve/SoleBot/tree/main/code/testTool). There's a video link in the News discussions thread, [Stardate 20241101, The basic electronics work.](https://github.com/crunchysteve/SoleBot/discussions/8) The next stage(s) involve equipping my 4 piece drum kit with a full complement of beaters and lifters. This probably won't be complete until early 2025, at this stage. This is a hobby project, not my day job, so apologies for the "fits and starts" activity. 
+[There's news](https://github.com/crunchysteve/SoleBot/discussions/8). I've now proven the electronics work with a simple four-on-the-floor, hard-coded drum beat, [testTool.ino](https://github.com/crunchysteve/SoleBot/tree/main/code/testTool). See below in [Progress](#progress).
 
 The microlatencies inherent in simple, 16 bit microcontrollers, like the entry-level boards of the Arduino family, plus the flex and movement of brackets holding the solenoids that drive the beaters, onto the instruments they're set to beat, lend themselves to a real-world sound. Tighter than a human, looser than a drum machine. A band in a road case or two on wheels, rolled into pubs and house parties, no more setup than a fancy DJ rig, all the excitement of a live performance by the human artist out front, backed by their robotic, imperfect band of machines.
 
@@ -30,9 +30,9 @@ To date, the project consists of a hardware test program - a repeating, four-on-
 
 A "motherboard" style circuit board has been designed but there are some small bugs with this already. On the imput side of the MOSFET driver boards, it's advised to connect all three data in and ground pins on the controller module to all three motherboard holes for input and ground, each. As this is primarily a prototype board to get a prototype kit running from my Alesis drum machine, I see no serious problems with using off-the-rack modules on a through-hole motherboard. Once the basic, minimal design is proven to work adequately, a more compact board, using discreet micro(s) (Atmel 328p or ATMega 2650 for more outputs), MOSFETs and supporting parts can be developed. Faster, higher bitdepth boards may reduce the random latencies of varying throughput, but those random latencies are the art introducing huamn feel to the playing. These older microcontrollers also help keep the cost down, improving accessibility to younger artists, who may not receive assistance from parents for "wasteful" things like music, but not yet in the workforce because of studies.
 
-![builtup motherboard for early prototype](https://github.com/crunchysteve/SoleBot/blob/main/images/MarkMothersboard.jpg)
+[![This is the SoléBot motherboard running the hardware test code.](https://img.youtube.com/vi/qrn4sm5H3BI/0.jpg)](https://www.youtube.com/watch?v=qrn4sm5H3BI)
 
-Yeah, I'm channelling aspects of my youth of *MANY* years ago. The struggle is still real today. Mums and dads everywhere still say, "[Get a haircut and get a real job.](https://www.youtube.com/watch?v=3w7CrxLj36I)" I've been guilty of this, sort of, with my own kids. Hey, you want the best for them and for them to be safe, OK.
+The YouTube video link, above, shows the SoléBot motherboard running the hardware test code that is used to play a simple, repetitive, four-on-the-floor while attaching solenoids and hardware to a drumkit.
 
 # Scope
 
