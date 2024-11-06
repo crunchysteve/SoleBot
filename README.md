@@ -57,4 +57,4 @@ Crunchy.
 
 PS: As always, this is an open project. If you can see a better way to do any part of this, post a feature request in the discussions, raise an issue, or offer your code with a pull request.
 
-![repaired prototype board](https://github.com/crunchysteve/SoleBot/blob/main/images/SoleBotBoard.png)
+![repaired prototype board](https://github.com/crunchysteve/SoleBot/blob/main/images/SoleBotPCBV1.1∂_pcb.png)
