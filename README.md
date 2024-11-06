@@ -20,6 +20,7 @@ If I still played live, I'd work for the same fee as an emerging DJ. In an all h
 
 So, the key is simplicity of equipment, the lone, high school, outcast nerd (my people of 40+ years ago and today represent!) can build their own band, literally, from accessible parts, in a platform that affords learning, then set out to rule a stage, if not the world. Arduino (Nano to Mega), C (at first, later Micropython? Javascript?), a MIDI to USB interface and a tablet with an app, any MIDI capable app. Then sound like a real band, not a band-in-a-box.
 [![Early proof-of-concept running a hardware test loop, driving 2 solenoids on a snare drum](https://img.youtube.com/vi/GSSUouHyVOM/0.jpg)](https://youtu.be/GSSUouHyVOM)
+
 Early proof-of-concept running a hardware test loop, driving 2 solenoids on a snare drum
 
 # Progress
