@@ -2,6 +2,8 @@
 
 ### [Discussions](https://github.com/crunchysteve/SoleBot/discussions) • [Wiki (Work In Progress)](https://github.com/crunchysteve/SoleBot/wiki) • [Thingiverse](https://www.thingiverse.com/thing:6771931) • [News](https://github.com/crunchysteve/SoleBot/discussions/categories/news)
 
+### [New Poll](https://github.com/crunchysteve/SoleBot/discussions/10)
+
 # SoléBot
 
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat the drums.
