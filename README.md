@@ -4,8 +4,8 @@
 
 ### [New Poll](https://github.com/crunchysteve/SoleBot/discussions/10)
 
-![What is SoléBot?](#solébot) - ![Background](#background) - ![Reasons](#why) - ![Progress](#progress)
-![Scope](#scope) - ![Contribution & Maintenance](#contribution-and-maintenance)
+[What is SoléBot?](#solébot) - [Background](#background) - [Reasons](#why) - ![Progress](#progress)
+[Scope](#scope) - [Contribution & Maintenance](#contribution-and-maintenance)
 
 # SoléBot
 
