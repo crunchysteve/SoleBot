@@ -4,9 +4,14 @@
 
 ### [New Poll](https://github.com/crunchysteve/SoleBot/discussions/10)
 
+![What is SoléBot?](#solébot) - ![Background](#background) - ![Reasons](#why) - ![Progress](#progress)
+![Scope](#scope) - ![Contribution & Maintenance](#contribution-and-maintenance)
+
 # SoléBot
 
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat the drums.
+
+# Background
 
 Hi, I'm "Crunchy." (Steve to people among my family and friends.)
 
@@ -26,11 +31,25 @@ So, the key is simplicity of equipment, the lone, high school, outcast nerd (my 
 
 Early proof-of-concept running a hardware test loop, driving 2 solenoids on a snare drum
 
+# Why?
+
+Well, why not? Yeah, there are others who have done this, and they're great! Most that I've seen don't appear to be more generalised, though, at least in the FOSS/OSS arena. I want to create a system of tools that can be used as a why to create a way to use MIDI to drive any drum or percussion rig, using whatever instrument(s) you play, of the shelf hardware *or* 3D printing to mount simple beaters. Nearly every other robo drummer I've seen has been built to work with the builder's drumkit. I want SoléBot to be generalised and adaptable, able to be driven via MIDI, USB MIDI and wireless MIDI. And this flexibility, using simple microcontrollers, makes it more accessible, too.
+
+I'd also like to see the electronics and firmware adapted to play other instruments, like my main instrument, bass guitar. This may require microcontrollers with more outputs than a 328P system for extreme examples, but it's more-or-less just as easy to do, with a modular, open source platform like I'm atempting to create with this project.
+
+Then there's what I believe might be the killer app. **Making the drums (at first) playable by somebody who only plays EDM instruments**. To paraphrase Fatboy Slim, you'd only need a 606! Imagine using a Behringer RD6 or a Roland TR-06 (Behringer's and Roland's reboots of the original TR-606, respectively) to play drums! **LIVE!** Playing the 606 back in the 80s was a fundamentally life-changing experience for me, it made beat composition so easy, I was even able to write down the patterns I created, in proper notation, to give to the drummer in my band. There was no MIDI on the 606, there *is* on the RD6 and the 06! 
+
+I genuinely beleive the 606's beat programming model one of the best drum machine user interfaces of all time! You start the machine on a blank patter, at the kick drum, watch the red LEDs step through the empty pattern, then add a 1 and a 3, the pattern reaches the end and sequences through again and... doof, (rest), doof, (rest), bar after bar, magic! Press another button, the pattern becomes doof, (rest), da-doof, (rest), interesting... switch to snare, tap the 2 and the 4, but fill in the 3 spots after the 4, too, *a snare fill!* It continues to play, while you create changes, all with a single pattern, layer after layer, selected with a simple rotary switch. A billion bedroom producer House Music fans can't be wrong!
+
+And now the MIDI reincarnations of the 606 make this available for playing real drums live **WHEN YOU"RE NOT A DRUMMER!** Because the modern versions have MIDI and SoléBot is already a prototype MIDI percussion robot development kit, just self source your parts. Classic, retro designs and skills used with a free open source software community project on flexible hardware. EDM skills become *RAWK!* Rock becomes a block rockin' *BEAT.* Crazy ideas are how the arts evolve, how the tired or classic old becomes rejevenated, different, exciting!
+
+If that's not a killer app for musical robotics then, as the dadaists and punks claimed, art is dead and f*** art, dance instead. Not to mention, drumming access for the disabled! Killer app in every way!
+
 # Progress
 
-To date, the project consists of a hardware test program - a repeating, four-on-the-floor loop that's been tested on an Arduino UNO and Nano (testTool), as well as a rudimentary, non-blocking MIDI reader code base that assigns MIDI notes and velocities from channel 10 to analogWrite() outputs and digitalWrite() outputs based on whether loudness control is needed or just simple on/off. (midiSolebot) The latter hasn't been tested beating drums, but testTool has (above video) and can handle dynamics.
+To date, the project consists of a hardware test program - a repeating, four-on-the-floor loop that's been tested on an Arduino UNO and Nano (testTool), as well as a rudimentary, non-blocking MIDI reader code base that assigns MIDI notes and velocities from channel 10 to analogWrite() outputs and digitalWrite() outputs based on whether loudness control is needed or just simple on/off. The latter MIDI reader code hasn't been run on the MarkMothersboard yet, didn't crash a nano it was uploaded to, with extra Serial.println() commands to call when events happened as it looped through MIDI. It seems to work, at this stage.
 
-A "motherboard" style circuit board has been designed but there are some small bugs with this already. On the imput side of the MOSFET driver boards, it's advised to connect all three data in and ground pins on the controller module to all three motherboard holes for input and ground, each. As this is primarily a prototype board to get a prototype kit running from my Alesis drum machine, I see no serious problems with using off-the-rack modules on a through-hole motherboard. Once the basic, minimal design is proven to work adequately, a more compact board, using discreet micro(s) (Atmel 328p or ATMega 2650 for more outputs), MOSFETs and supporting parts can be developed. Faster, higher bitdepth boards may reduce the random latencies of varying throughput, but those random latencies are the art introducing huamn feel to the playing. These older microcontrollers also help keep the cost down, improving accessibility to younger artists, who may not receive assistance from parents for "wasteful" things like music, but not yet in the workforce because of studies.
+A "motherboard" style circuit board has been designed (nicknamed "MarkMothersboard") but there are some small bugs with this already. On the imput side of the MOSFET driver boards, it's advised to connect all three data in and ground pins on the controller module to all three motherboard holes for input and ground, each. As this is primarily a prototype board to get a prototype kit running from my Alesis drum machine, I see no serious problems with using off-the-rack modules on a through-hole motherboard. Once the basic, minimal design is proven to work adequately, a more compact board, using discreet micro(s) (Atmel 328p or ATMega 2650 for more outputs), MOSFETs and supporting parts can be developed. Faster, higher bitdepth boards may reduce the random latencies of varying throughput, but those random latencies are the art introducing huamn feel to the playing. These older microcontrollers also help keep the cost down, improving accessibility to younger artists, who may not receive assistance from parents for "wasteful" things like music, but not yet in the workforce because of studies.
 
 [![This is the SoléBot motherboard running the hardware test code.](https://img.youtube.com/vi/qrn4sm5H3BI/0.jpg)](https://www.youtube.com/watch?v=qrn4sm5H3BI)
 
@@ -38,9 +57,9 @@ The YouTube video link, above, shows the SoléBot motherboard running the hardwa
 
 # Scope
 
-The main focus of this project is the controller and the firmware, although, providing template-based bracket designs (currently OpenSCAD format and far from universal mounting) is important, too. As the project needs to remain simple and beginner friendly, staying with the Arduino platform provides people, who want to undertake their own robotic drumkit project, with a wide support network for learning and solutions. This doesn't rule out other platforms (like micropython or tinyGo) at a later stage, but C/C++ in Arduino is the primary target of this project.
+The main focus of this project is the controller and the firmware, although, providing template-based bracket designs (currently OpenSCAD format and far from universal mounting) and a basic logic and driver hardware platform is important, too. As the project needs to remain simple and beginner friendly, staying with the Arduino platform provides people, who want to undertake their own robotic drumkit project, with a wide support network for learning and solutions. This doesn't rule out other platforms (like micropython or tinyGo) at a later stage, but C/C++ in Arduino is the primary target of this project.
 
-Note: I use platformIO for other projects, but this should stay in ArduinoIDE format, again for accessibility for beginners and the less technological. I'm writing in VSCode for its git tools, but verifying/uploading the code from ArduinoIDE. I'd like to see this project stay at least available in this format. I have no problem with a PlatformIO version being the main format eventually, but only provided it's ported to ArduinoIDE format at release stages, for accessibility.
+Note: I use platformIO for other projects, but this should stay in ArduinoIDE format, again for accessibility for beginners and the less technological. I'm writing in VSCode for its git tools, but verifying/uploading the code to hardware from ArduinoIDE. I'd like to see this project stay at least available in this format. I have no problem with a PlatformIO version being the main format eventually, but only provided it's ported to ArduinoIDE format at release stages, for accessibility.
 
 Initially, the project's aim is to develop a "single beater per drum," four piece kit using 328p controllers, purely for the simplicity of this platform. Larger kits, with "two-handed" emulations on snare and hats, double kick, etc, and ethnic or orchestral percussion systems could be developed. The Nano's analog ports are proken ot to header pins on the motherboard, to allow use as digital outputs for nondynamic actuators, like hihat lifters.
 
