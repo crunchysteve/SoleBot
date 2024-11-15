@@ -46,22 +46,22 @@
         #define METRONOME_CLK 32
         #define METRONOME_BELL 33
         #define BASS_DRUM 34
-        #define KICK_DRUM 36
+        #define KICK_DRUM 36          //  RD-6 "BD" - RD-6 Accented notes get more velocity
         #define SNARE_CROSS_STICK 37
         #define SNARE_DRUM 38
-        #define HAND_CLAP 39
-        #define ELEC_SNARE_DRUM 40
+        #define HAND_CLAP 39          //  RD-6 "CP" - RD-6 Accented notes get more velocity
+        #define ELEC_SNARE_DRUM 40    //  RD-6 "SD" - RD-6 Accented notes get more velocity
         #define FLOOR_TOM_2 41
-        #define HI_HAT_CLOSED 42
+        #define HI_HAT_CLOSED 42      //  RD-6 "CH" - RD-6 Accented notes get more velocity
         #define FLOOR_TOM_1 43
         #define HI_HAT_HALF 44
-        #define LOW_TOM 45
-        #define HI_HAT_OPEN 46
+        #define LOW_TOM 45            //  RD-6 "LT" - RD-6 Accented notes get more velocity
+        #define HI_HAT_OPEN 46        //  RD-6 "OH" - RD-6 Accented notes get more velocity
         #define LOW_MID_TOM 47
         #define HIGH_MID_TOM 48
         #define CRASH_CYMBAL 49
-        #define HIGH_TOM 50
-        #define RIDE_CYMBAL 51
+        #define HIGH_TOM 50           //  RD-6 "HT" - RD-6 Accented notes get more velocity
+        #define RIDE_CYMBAL 51        //  RD-6 "CY" - RD-6 Accented notes get more velocity
         #define CHINA_CYMBAL 52
         #define RIDE_BELL 53
         #define TAMBOURINE 54

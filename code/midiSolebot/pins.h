@@ -49,20 +49,24 @@
       //  MIDI note number, output pin, whether analog or digital out, 
       //                                whether out has been played and at what time.
         byte DRUMS[][5] = {
-          {STICK_CLICK,CLCK,0,0,0},   /* Stick Click, pin 2, digital, triggered, ms */
-          {KICK_DRUM,KICK,1,0,0},     /* Kick Drum, pin 3, analog, triggered, ms */
-          {CRASH_CYMBAL,CRSH,0,0,0},  /* Crash Cymbal, pin 4, digital, triggered, ms */
-          {SNARE_DRUM,SNRE,1,0,0},    /* Snare Drum, pin 5, analog, triggered, ms */
-          {HI_HAT_HALF,HHAT,1,0,0},   /* HiHat hit (half open), pin 6, analog, 
-                                                                          triggered, millis() */
-          {HI_HAT_OPEN,HOPN,0,0,0},   /* HiHat hit (top lift open), pin 7, digital, 
-                                                                          triggered, millis() */
-          {HI_HAT_CLOSED,HCLS,0,0,0}, /* HiHat hit (bottom lift close), pin 8, digital, 
-                                                                          triggered, millis() */
-          {HIGH_MID_TOM,RTOM,1,0,0},  /* Rack Tom, pin 9, analog, triggered, ms */
-          {FLOOR_TOM_1,FTOM,1,0,0},   /* Floor Tom, pin 10, analog, triggered, ms */
-          {RIDE_CYMBAL,RIDE,1,0,0},   /* Ride Cymbal, pin 11, analog, triggered, ms */
-          {COWBELL,CBEL,0,0,0}        /* Cowbell, pin 12, digital, triggered, ms */
+          {HAND_CLAP,CLCK,0,0,0},       /* MIDI note 39, pin 2, digital, triggered, ms 
+                                                  - RD-6 will trigger a stick count on SoleBot*/
+          {KICK_DRUM,KICK,1,0,0},       /* MIDI note 36, pin 3, analog, triggered, ms */
+          {RIDE_CYMBAL,CRSH,0,0,0},     /* MIDI note 51, pin 4, digital, triggered, ms */
+          {ELEC_SNARE_DRUM,SNRE,1,0,0}, /* MIDI note 40, pin 5, analog, triggered, ms */
+          {HI_HAT_HALF,HHAT,1,0,0},     /* MIDI note 44, pin 6, analog, triggered, 
+                                                  millis() - Not triggered by RD-6 */
+          {HI_HAT_OPEN,HOPN,0,0,0},     /* MIDI note 46, pin 7, digital, 
+                                                  triggered, millis() */
+          {HI_HAT_CLOSED,HCLS,0,0,0},   /* MIDI note 42, pin 8, digital, 
+                                                  triggered, millis() */
+          {HIGH_MID_TOM,RTOM,1,0,0},    /* MIDI note 50, pin 9, analog, triggered, ms */
+          {FLOOR_TOM_1,FTOM,1,0,0},     /* MIDI note 45, pin 10, analog, triggered, ms */
+          {RIDE_CYMBAL,RIDE,1,0,0},     /* MIDI note 51, pin 11, analog, 
+                                                  triggered, ms - Not triggered by RD-6 */
+          {COWBELL,CBEL,0,0,0}          /* MIDI note 56, pin 12, digital, 
+                                                  triggered, ms - Not triggered by RD-6 */
         };
-        byte LED = 13;             //  Will (eventually) flash the LED every quaternote from MIDI clock
+        byte LED = 13;                  /*  LED will (eventually) flash the LED every 
+                                                            quaternote from MIDI clock */
 #endif
