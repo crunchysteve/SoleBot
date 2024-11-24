@@ -45,6 +45,9 @@
         #define FTOM 10   /* Floor tom */
         #define RIDE 11   /* Ride cymbal */
         #define CBEL 12   /* Cow bell or woodblock */
+        
+        #define MIDI_IN 18    //  MIDI Rx
+        #define MIDI_OUT 19   //  MIDI Tx
       //  The fields in each drum represent...
       //  MIDI note number, output pin, whether analog or digital out, 
       //                                whether out has been played and at what time.

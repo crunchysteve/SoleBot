@@ -41,9 +41,7 @@
 #include <SoftwareSerial.h>
 
 using Transport = MIDI_NAMESPACE::SerialMIDI<SoftwareSerial>;
-int rxPin = 18;
-int txPin = 19;
-SoftwareSerial mySerial = SoftwareSerial(rxPin, txPin);
+SoftwareSerial mySerial = SoftwareSerial(MIDI_IN, MIDI_OUT);  //  see pins.h for MIDI serial pins
 Transport serialMIDI(mySerial);
 MIDI_NAMESPACE::MidiInterface<Transport> MIDI((Transport&)serialMIDI);
 
@@ -57,6 +55,7 @@ void handleNoteOn(byte inChannel, byte inNote, byte inVelocity){
           DRUMS[i][3] = 1;
           DRUMS[i][4] = millis();
         } else {
+          analogWrite(DRUMS[i][1],inVelocity + 128);
           digitalWrite(DRUMS[i][1],1);
           //  If hi-hat open or close, then hit it with the stick, as well.
           if(DRUMS[i][1] == HOPN || DRUMS[i][1] == HCLS) analogWrite(HHAT,inVelocity + 128);
