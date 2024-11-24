@@ -119,4 +119,5 @@ void setup(){
 void loop(){
     MIDI.read();
     handleNoteTimeout();
+    ACTV = 1;
 }
