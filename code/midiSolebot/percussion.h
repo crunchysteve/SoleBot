@@ -36,6 +36,12 @@
         //  MIDI Default Percussion Channel
         #define CHANNEL 10
         int midi_chan = CHANNEL;  //  default startup MIDI percussion channel
+
+        //  hi-hat states
+        #define OPEN false          //  hi-hat open
+        #define CLOSED true         //  hi-hat closed
+        #define HAT_MODE_STATES 2   //  2 states, open/closed, or 3 states, open/half/closed
+                                    //  2 states to start with, 3 state hats to be added later
         
         //  General MIDI Percussion Table
         #define LASER 27
