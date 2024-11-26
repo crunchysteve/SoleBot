@@ -51,7 +51,7 @@ void handleNoteOn(byte inChannel, byte inNote, byte inVelocity){
                             if(inVelocity > 110){
                               digitalWrite(DRUMS[0][1],HIGH);
                             } else {
-                              tone(DRUMS[0][1],490,20);
+                              tone(DRUMS[0][1],490,BEAT_PULSE_DURATION);
                             }
                             break;
       case KICK_DRUM:       DRUMS[1][4] = millis();   //  MIDI note 36, pin 3, analogWrite(), triggered, ms
@@ -115,26 +115,40 @@ void handleNoteOff(byte inChannel, byte inNote, byte inVelocity){
     // int thisDrum = inNote;
     switch(inNote){
       case HAND_CLAP:       DRUMS[0][3] = false;
+                            noTone(DRUMS[0][1]);
+                            digitalWrite(DRUMS[0][1],LOW);
                             break;
       case KICK_DRUM:       DRUMS[1][3] = false;
+                            analogWrite(DRUMS[1][1],0);
                             break;
       case CRASH_CYMBAL:    DRUMS[2][3] = false;
+                            noTone(DRUMS[2][1]);
+                            digitalWrite(DRUMS[2][1],LOW);
                             break;
       case ELEC_SNARE_DRUM: DRUMS[3][3] = false;
+                            analogWrite(DRUMS[3][1],0);
                             break;
       case HI_HAT_HALF:     DRUMS[4][3] = false;
+                            analogWrite(DRUMS[4][1],0);
                             break;
       case HI_HAT_OPEN:     DRUMS[5][3] = false;
+                            analogWrite(DRUMS[4][1],0);
                             break;
       case HI_HAT_CLOSED:   DRUMS[6][3] = false;
+                            analogWrite(DRUMS[4][1],0);
                             break;
       case HIGH_MID_TOM:    DRUMS[7][3] = false;
+                            analogWrite(DRUMS[7][1],0);
                             break;
       case FLOOR_TOM_1:     DRUMS[8][3] = false;
+                            analogWrite(DRUMS[8][1],0);
                             break;
       case RIDE_CYMBAL:     DRUMS[9][3] = false;
+                            analogWrite(DRUMS[9][1],0);
                             break;
       case COWBELL:         DRUMS[10][3] = false;
+                            noTone(DRUMS[10][1]);
+                            digitalWrite(DRUMS[10][1],LOW);
                             break;
       
       default:              break;
@@ -147,7 +161,7 @@ void handleNoteTimeout(){
     if(DRUMS[i][3] && millis() >= DRUMS[i][4] + BEAT_PULSE_DURATION){
       if(DRUMS[i][2] == 1){
         analogWrite(DRUMS[i][1],0);
-        DRUMS[i][3] = 0;
+        DRUMS[i][3] = false;
       } else {
         digitalWrite(DRUMS[i][1],0);
         //  If hi-hat open or close, then turn off the stick, as well.
