@@ -38,12 +38,10 @@
 
 //  Standard Libraries
 #include <MIDI.h>
-#include <SoftwareSerial.h>
 
-using Transport = MIDI_NAMESPACE::SerialMIDI<SoftwareSerial>;
-SoftwareSerial mySerial = SoftwareSerial(MIDI_IN, MIDI_OUT);  //  see pins.h for MIDI serial pins
-Transport serialMIDI(mySerial);
-MIDI_NAMESPACE::MidiInterface<Transport> MIDI((Transport&)serialMIDI);
+int midi_chan = CHANNEL;  //  default startup MIDI percussion channel
+
+MIDI_CREATE_DEFAULT_INSTANCE();   //  Instantiate standard serial MIDI
 
 void handleNoteOn(byte inChannel, byte inNote, byte inVelocity){
   if(inChannel == midi_chan){
@@ -109,11 +107,10 @@ void handleNoteTimeout(){
 }
 
 void setup(){
-    Serial.begin(115200);
+    MIDI.begin(midi_chan);
     initialise_outs(DRUMS[0][1],DRUMS[10][1]);  //  call output pin initialisations
     MIDI.setHandleNoteOn(handleNoteOn);
     MIDI.setHandleNoteOff(handleNoteOff);
-    MIDI.begin(midi_chan);
 }
 
 void loop(){

@@ -35,7 +35,6 @@
     #define PERCUSSION_H
         //  MIDI Default Percussion Channel
         #define CHANNEL 10
-        int midi_chan = CHANNEL;  //  default startup MIDI percussion channel
 
         //  hi-hat states
         #define OPEN false          //  hi-hat open

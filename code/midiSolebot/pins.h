@@ -45,16 +45,16 @@
       #define FTOM 10   /* Floor tom */
       #define RIDE 11   /* Ride cymbal */
       #define CBEL 12   /* Cow bell or woodblock */
-        
-      #define MIDI_IN 18    //  MIDI Rx
-      #define MIDI_OUT 19   //  MIDI Tx
+      
       //  The fields in each drum represent...
       //  MIDI note number, output pin, whether analog or digital out, 
       //                                if has been played and at what time.
 
-      #define DIG 0     //  Digital/hybrid output pin type
-      #define ANL 1     //  Analog output pin type
-      #define HYB 2     //  Three state pin: LOW for off, tone(490) for half on and HIGH for on
+      #define DIG 0     //  Digital output pin type - digitalWrite()
+      #define ANL 1     //  Analog output pin type - analogWrite()
+      #define HYB 2     //  Three state pin: digitalWrite(PIN,LOW) for off, 
+                        //  tone(PIN,490,DURATION) for half on and 
+                        //  digitalWrite(PIN,HIGH) for on
       bool ACTV = 0;    //  is beater activated? LOW = no, HIGH = yes
       uint32_t TMR = 0; //  is beater activated? LOW = no, HIGH = yes
 
