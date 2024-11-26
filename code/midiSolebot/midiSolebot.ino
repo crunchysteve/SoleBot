@@ -45,45 +45,99 @@ MIDI_CREATE_DEFAULT_INSTANCE();   //  Instantiate standard serial MIDI
 
 void handleNoteOn(byte inChannel, byte inNote, byte inVelocity){
   if(inChannel == midi_chan){
-    for(int i=0; i < 11; i++){
-      if(DRUMS[i][0] == inNote){
-        digitalWrite(LED,HIGH);
-        if(DRUMS[i][2] == 1){
-          analogWrite(DRUMS[i][1],inVelocity + 128);
-          DRUMS[i][3] = 1;
-          DRUMS[i][4] = millis();
-        } else {
-          analogWrite(DRUMS[i][1],inVelocity + 128);
-          digitalWrite(DRUMS[i][1],1);
-          //  If hi-hat open or close, then hit it with the stick, as well.
-          if(DRUMS[i][1] == HOPN || DRUMS[i][1] == HCLS) analogWrite(HHAT,inVelocity + 128);
-          DRUMS[i][3] = 1;
-          DRUMS[i][4] = millis();
-        }
-        digitalWrite(LED,LOW);
-      }
+    switch(inNote){
+      case HAND_CLAP:       DRUMS[0][4] = millis();   //  MIDI note 39, pin 2, Hybrid (tone/digitalWrite), triggered, ms 
+                            DRUMS[0][3] = true;       //  RD-6 will trigger a block count on SoleBot
+                            if(inVelocity > 110){
+                              digitalWrite(DRUMS[0][1],HIGH);
+                            } else {
+                              tone(DRUMS[0][1],490,20);
+                            }
+                            break;
+      case KICK_DRUM:       DRUMS[1][4] = millis();   //  MIDI note 36, pin 3, analogWrite(), triggered, ms
+                            DRUMS[1][3] = true;
+                            analogWrite(DRUMS[1][1],2*inVelocity);
+                            break;
+      case CRASH_CYMBAL:    DRUMS[2][4] = millis();   //  MIDI note 51, pin 4, hybrid (tone/digitalWrite), triggered, ms
+                            DRUMS[2][3] = true;
+                            if(inVelocity > 110){
+                              digitalWrite(DRUMS[2][1],HIGH);
+                            } else {
+                              tone(DRUMS[2][1],490,20);
+                            }
+                            break;
+      case ELEC_SNARE_DRUM: DRUMS[3][4] = millis();   //  MIDI note 40, pin 5, analog, triggered, ms
+                            DRUMS[3][3] = true;
+                            analogWrite(DRUMS[3][1],2*inVelocity);
+                            break;
+      case HI_HAT_HALF:     DRUMS[4][4] = millis();   //  MIDI note 44, pin 6, analog, triggered, millis()
+                            DRUMS[4][3] = true;       //  Not used by RD-6
+                            analogWrite(DRUMS[4][1],2*inVelocity);  //  stick hit
+                            break;
+      case HI_HAT_OPEN:     DRUMS[5][4] = millis();   //  MIDI note 46, pin 7, digital, triggered, millis()
+                            DRUMS[5][3] = true;       //  RD-6 transmits this hi-hat message
+                            digitalWrite(DRUMS[5][1],HIGH);         //  top hat lift, not used by RD-6, treated as unpedalled hit
+                            analogWrite(DRUMS[4][1],2*inVelocity);  //  stick hit
+                            break;
+      case HI_HAT_CLOSED:   DRUMS[6][4] = millis();   //  MIDI note 42, pin 8, digital, triggered, millis() 
+                            DRUMS[6][3] = true;       //  RD-6 also transmits this hi-hat message
+                            digitalWrite(DRUMS[6][1],HIGH);         //  top hat close, RD-6 sends this message
+                            analogWrite(DRUMS[4][1],2*inVelocity);  //  stick hit
+                            break;
+      case HIGH_MID_TOM:    DRUMS[7][4] = millis();   //  MIDI note 50, pin 9, analog, triggered, ms
+                            DRUMS[7][3] = true;
+                            analogWrite(DRUMS[7][1],2*inVelocity);  //  stick hit
+                            break;
+      case FLOOR_TOM_1:     DRUMS[8][4] = millis();   //  MIDI note 45, pin 10, analog, triggered, ms
+                            DRUMS[8][3] = true;
+                            analogWrite(DRUMS[8][1],2*inVelocity);  //  stick hit
+                            break;
+      case RIDE_CYMBAL:     DRUMS[9][4] = millis();   //  MIDI note 51, pin 11, analog, triggered, ms
+                            DRUMS[9][3] = true;       //  Not triggered by RD-6
+                            analogWrite(DRUMS[9][1],2*inVelocity);  //  stick hit
+                            break;
+      case COWBELL:         DRUMS[10][4] = millis();  //  MIDI note 56, pin 12, hybrid (tone/digitalWrite), triggered, ms
+                            DRUMS[10][3] = true;      //  Not triggered by RD-6
+                            if(inVelocity > 110){
+                              digitalWrite(DRUMS[10][1],HIGH);
+                            } else {
+                              tone(DRUMS[10][1],490,20);
+                            }
+                            break;
+      
+      default:              break;
     }
   }
 }
 
 void handleNoteOff(byte inChannel, byte inNote, byte inVelocity){
   if(inChannel == midi_chan){
-    for(int i=0; i < 11; i++){
-      if(DRUMS[i][0] == inNote){
-        digitalWrite(LED,HIGH);
-        if(DRUMS[i][2] == 1){
-          analogWrite(DRUMS[i][1],0);
-          DRUMS[i][3] = 0;
-          // will start a pulse length timer here for main loop checking
-        } else {
-          digitalWrite(DRUMS[i][1],0);
-          //  If hi-hat open or close, then turn off the stick, as well.
-          if(DRUMS[i][1] == HOPN || DRUMS[i][1] == HCLS) analogWrite(HHAT,0);
-          DRUMS[i][3] = 0;
-          // will start a pulse length timer here for main loop checking
-        }
-        digitalWrite(LED,LOW);
-      }
+    // int thisDrum = inNote;
+    switch(inNote){
+      case HAND_CLAP:       DRUMS[0][3] = false;
+                            break;
+      case KICK_DRUM:       DRUMS[1][3] = false;
+                            break;
+      case CRASH_CYMBAL:    DRUMS[2][3] = false;
+                            break;
+      case ELEC_SNARE_DRUM: DRUMS[3][3] = false;
+                            break;
+      case HI_HAT_HALF:     DRUMS[4][3] = false;
+                            break;
+      case HI_HAT_OPEN:     DRUMS[5][3] = false;
+                            break;
+      case HI_HAT_CLOSED:   DRUMS[6][3] = false;
+                            break;
+      case HIGH_MID_TOM:    DRUMS[7][3] = false;
+                            break;
+      case FLOOR_TOM_1:     DRUMS[8][3] = false;
+                            break;
+      case RIDE_CYMBAL:     DRUMS[9][3] = false;
+                            break;
+      case COWBELL:         DRUMS[10][3] = false;
+                            break;
+      
+      default:              break;
     }
   }
 }
@@ -91,17 +145,17 @@ void handleNoteOff(byte inChannel, byte inNote, byte inVelocity){
 void handleNoteTimeout(){
   for(int i=0; i < 11; i++){
     if(DRUMS[i][3] && millis() >= DRUMS[i][4] + BEAT_PULSE_DURATION){
-      digitalWrite(LED,HIGH);
       if(DRUMS[i][2] == 1){
         analogWrite(DRUMS[i][1],0);
         DRUMS[i][3] = 0;
       } else {
         digitalWrite(DRUMS[i][1],0);
         //  If hi-hat open or close, then turn off the stick, as well.
-        if(DRUMS[i][1] == HOPN || DRUMS[i][1] == HCLS) analogWrite(HHAT,0);
-        DRUMS[i][3] = 0;
+        if(DRUMS[i][1] == HOPN || DRUMS[i][1] == HCLS && DRUMS[i][3] == true){
+          analogWrite(DRUMS[4][1],0);
+          DRUMS[i][3] = false;
+        }
       }
-      digitalWrite(LED,LOW);
     }
   }
 }
@@ -116,5 +170,4 @@ void setup(){
 void loop(){
     MIDI.read();
     handleNoteTimeout();
-    ACTV = 1;
 }

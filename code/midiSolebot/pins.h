@@ -60,9 +60,9 @@
 
       uint32_t DRUMS[][5] = {
         {HAND_CLAP,CLCK,HYB,ACTV,TMR},       /* MIDI note 39, pin 2, digital, triggered, ms 
-                                                - RD-6 will trigger a block count on SoleBot*/
+                                                RD-6 will trigger a block count on SoleBot*/
         {KICK_DRUM,KICK,ANL,ACTV,TMR},       /* MIDI note 36, pin 3, analog, triggered, ms */
-        {RIDE_CYMBAL,CRSH,DIG,ACTV,TMR},     /* MIDI note 51, pin 4, digital, triggered, ms */
+        {CRASH_CYMBAL,CRSH,HYB,ACTV,TMR},     /* MIDI note 51, pin 4, digital, triggered, ms */
         {ELEC_SNARE_DRUM,SNRE,ANL,ACTV,TMR}, /* MIDI note 40, pin 5, analog, triggered, ms */
         {HI_HAT_HALF,HHAT,ANL,ACTV,TMR},     /* MIDI note 44, pin 6, analog, triggered, millis() 
                                                 - Not triggered by RD-6  half open/sizzle */

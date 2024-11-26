@@ -35,7 +35,7 @@
     #define INITIALISATIONS_H
 
         //  Timer duration for maximum beat pulsewidth
-        #define BEAT_PULSE_DURATION 100
+        #define BEAT_PULSE_DURATION 50
 
         //  Initialise output pins - while most are used as analog pins, this function 
         //  ensures all are writable as digital outputs for zeroing in crash/save scenarios.
