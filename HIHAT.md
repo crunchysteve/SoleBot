@@ -1,6 +1,6 @@
 ## Hi-Hat Design
 
-There are several ways to do this and, of course, in tunnel vision I've been looking at ways to operate the "hats" with a "pedal." (eg, use a solenoid to pull the pedal shaft) It's occurred to me this week that there's another way, 3 hih-hat sets, 3 clutches and a single shaft. Set the bottom pair closed, the middle pair loosely touching edges (half closed) and the top pair (a single one, really) as open.
+There are several ways to do this and, of course, in my tunnel vision I've been looking at ways to operate the "hats" with a "pedal." (eg, use a solenoid to pull the pedal shaft) It's occurred to me this week that there's another way, 3 hih-hat sets, 3 clutches and a single shaft. Set the bottom pair closed, the middle pair loosely touching edges (half closed) and the top pair (a single one, really) as open.
 
 There are advantages and disadvantages to both ways, of course.
 
