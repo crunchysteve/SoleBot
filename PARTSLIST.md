@@ -8,6 +8,7 @@
 ![adafruit_products_MIDI_FW_pinouts_bottom](https://github.com/user-attachments/assets/2f139a04-be2f-4bb9-bde0-a7053045ebff)
 
 (Note: once I have a working prototype, I'll start refining the motherboard to have its own built-in MIDI interface.)
+
 4. Pretty much any 12v solenoid of any force rating of 20N or more, such as the [JF-0826B](https://www.aliexpress.com/item/32847809022.html At least one per drum and at least 3 for the hi-hats, 1 or 2 for beaters, 2 for lifting.), the 60N JF-1250B has been added to solenoids.scad to use as a template in design models. Hi-hat closing solenoid probably requires the JF-1250B at a minimum,
 4. 24v, 5A (for MOSFETs and solenoids) and 5v, 1A (for microcontroller) power supplies,
 6. Hookup wire, light duty for microcontroller to MOSFETs, heavy duty from MOSFETS to solenoids,
