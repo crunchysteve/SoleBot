@@ -16,7 +16,7 @@ Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI dru
 ![SoléBotLidded](https://github.com/user-attachments/assets/9c6db680-a43c-4a7f-b671-45194a8aac0b)
 ![SoléUnledded](https://github.com/user-attachments/assets/205b902c-3f0b-4b2c-b485-7c083a3434f6)
 
-All that's left is to wire up the MIDI receiver and hook it up to the drums. ("All that's left..." :rolleyes:
+All that's left is to wire up the MIDI receiver and hook it up to the drums. ("All that's left..." :rolleyes: )
 
 # Background
 
