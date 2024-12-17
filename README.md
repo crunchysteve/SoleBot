@@ -9,6 +9,15 @@
 
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat the drums.
 
+#Another Stage in the working Prototype
+
+20241212-1835AEDT: The "Markmothersburg" now has a 24v power supply, a MIDI interface and a housing. Just waiting for the 5v buck converter to arrive and I can start wirring it up. Pictures...
+
+![SoléBotLidded](https://github.com/user-attachments/assets/9c6db680-a43c-4a7f-b671-45194a8aac0b)
+![SoléUnledded](https://github.com/user-attachments/assets/205b902c-3f0b-4b2c-b485-7c083a3434f6)
+
+All that's left is to wire up the MIDI receiver and hook it up to the drums. ("All that's left..." :rolleyes: )
+
 # Background
 
 Hi, I'm "Crunchy." (Steve to people among my family and friends.)
