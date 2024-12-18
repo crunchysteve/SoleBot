@@ -1,17 +1,19 @@
 use <solenoid.scad>
 
 $fn = 30;
+print = true;
 
-//translate([0,11,0]) rotate([0,0,-90]) solenoid();
+//  If print is "false" show the solenoid, otherwise don't.
+if(!print) translate([0,11,0]) rotate([0,0,-90]) solenoid();
 
 arm() ;
 
 module arm() difference(){
     armProfile();
-    translate([24,-6,6]) rotate([0,90,0]) cylinder(r=2,h=10);
-    translate([30,-6,6]) rotate([0,90,0]) cylinder(r=3,h=15);
-    translate([24,6,20.5]) rotate([0,90,0]) cylinder(r=2,h=10);
-    translate([30,6,20.5]) rotate([0,90,0]) cylinder(r=3,h=10);
+    for(y=[-6,6]) for(z=[6,20.5]){
+        translate([24,y,z]) rotate([0,90,0]) cylinder(r=1.8,h=10);
+        translate([30,y,z]) rotate([0,90,0]) cylinder(r=3,h=15);
+    }
 }
 
 module armProfile() linear_extrude(height=27) difference(){
