@@ -22,6 +22,8 @@ Pictures...
 
 The Gibraltar Vintage Hoop clamps come in a pack of 6, enough for three brackets.The little hooky-shaped thing on its side is what they look like. I think this design, which offers more adjustment of beater position and and height is a big improvement on the previous design. For those running bedslinger 3D printers, easier to print than the old design, too, and stronger if your bedslinger's only good for PLA.
 
+The rim hooks are [Gibratar part ID SC-VHTRC](https://gibraltarhardware.com/products/sc-vhtrc-tension-rod-clips).
+
 #Another Stage in the working Prototype
 
 20241212-1835AEDT: The "Markmothersburg" now has a 24v power supply, a MIDI interface and a housing. Just waiting for the 5v buck converter to arrive and I can start wirring it up. Pictures...
