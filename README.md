@@ -16,8 +16,11 @@ Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI dru
 This design uses a pair of Gibratar vintage hoop clips, a length of M5 threaded rod and a few nuts and washers to fasten the bracket to the drum. It also mounts the solenoid out from the end of the bracket, rather than mounting it on the side. This should prevent any inaccuracies that *may* be introduced by torsional forces of the solenoid being offset from the bracket centre.
 
 Pictures...
+![newDrumBeaterBrkt](https://github.com/user-attachments/assets/c921a782-1ddc-4d33-bac5-6f097dd55e57)
+![newDrumBeaterBrktWithHoopClip](https://github.com/user-attachments/assets/37c54547-b370-43a3-bfbc-73f1526ed614)
 
 
+The Gibraltar Vintage Hoop clamps come in a pack of 6, enough for three brackets.The little hooky-shaped thing on its side is what they look like. I think this design, which offers more adjustment of beater position and and height is a big improvement on the previous design. For those running bedslinger 3D printers, easier to print than the old design, too, and stronger if your bedslinger's only good for PLA.
 
 #Another Stage in the working Prototype
 
