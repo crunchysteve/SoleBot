@@ -31,7 +31,7 @@
   This preamble must always remain at the head of all 3d models and source code.
 */
 
-use <solenoid.scad>
+use <solenoids.scad>
 
 $fn = 30;
 print = true;

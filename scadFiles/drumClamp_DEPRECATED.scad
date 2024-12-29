@@ -31,11 +31,11 @@
   This preamble must always remain at the head of all 3d models and source code.
 */
 
-use <solenoid.scad>
+use <solenoids.scad>
 use <beaters.scad>
 
 arm();
-//translate([0,17,4]) snareSolenoid();
+translate([0,17,4]) snareSolenoid();
 
 module arm(){
     translate([0,17]) difference(){
