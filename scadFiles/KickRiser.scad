@@ -1,10 +1,13 @@
-use <drumClamp.scad>
+use <drumClamp_DEPRECATED.scad>
+use <solenoids.scad>
+//translate([14,4,205.5]) rotate([0,-90,0]) solenoid(position=0,type="JF1250B");
 
 //  Currently, all dimensions are solely for my tiny "kiddy kit."
 //  I cheat and reuse the drumClamp bracket for the solenoid mount here.
 
 translate([-2,0,0]) base();
 translate([0,0,6]) riser();
+
 
 module riser() translate([-2,0,0]) difference(){
     union(){
