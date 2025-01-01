@@ -11,7 +11,7 @@ Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI dru
 
 # New Solenoid Bracket Design
 
-20241212-1835AEDT: Ignoring the "wrong" mounting holes for the solenoids the new beater bracket design is done.
+20250101-1205AEDT: The new beater bracket design is done, printed and tested. Update photos to follow in the next day or so.
 
 This design uses a pair of Gibratar vintage hoop clips, a length of M5 threaded rod and a few nuts and washers to fasten the bracket to the drum. It also mounts the solenoid out from the end of the bracket, rather than mounting it on the side. This should prevent any inaccuracies that *may* be introduced by torsional forces of the solenoid being offset from the bracket centre.
 
@@ -26,18 +26,18 @@ The rim hooks are [Gibratar part ID SC-VHTRC](https://gibraltarhardware.com/prod
 
 #Another Stage in the working Prototype
 
-20241212-1835AEDT: The "Markmothersburg" now has a 24v power supply, a MIDI interface and a housing. Just waiting for the 5v buck converter to arrive and I can start wirring it up. Pictures...
+20241212-1835AEDT: The "Markmothersburg" now has a 24v power supply, a MIDI interface and a housing. Just waiting for the 5v buck converter to arrive and I can start wiring it up. Pictures...
 
 ![SoléBotLidded](https://github.com/user-attachments/assets/9c6db680-a43c-4a7f-b671-45194a8aac0b)
 ![SoléUnledded](https://github.com/user-attachments/assets/205b902c-3f0b-4b2c-b485-7c083a3434f6)
 
-All that's left is to wire up the MIDI receiver and hook it up to the drums. ("All that's left..." :rolleyes: )
+All that's left after tht is to wire up the MIDI receiver and hook it up to the drums.
 
 # Background
 
 Hi, I'm "Crunchy." (Steve to people among my family and friends.)
 
-As a semi-pro, live musician for close to 40 years of my 63 years alive, I've watched live bands, particularly electric bands at the pub music level, struggle to compete with DJs and recorded entertainment, because one paycheck is cheaper than two, three or "insert band size here" paychecks. Drum machines, bands in boxes and Digital Audio Workstations have helped a little, and even swing, but the sounds in even the best drum machines, while dynamic, are often too perfect. Every hit, at a given velocity in a given drum set, sounds the same, unlike a human drummer. I want a system that has inherent, "human like" imperfections that make every stroke sound like a human played it, while still allowing a solo artist to perform to pre-recorded backing tracks, and I want this to be as affordable and accessible as anything in today's typical home studio.
+As a semi-pro, live musician for close to 40 of my 63 years alive, I've watched live bands, particularly electric bands at the pub music level, struggle to compete with DJs and recorded entertainment, because one paycheck is cheaper than two, three or "insert band size here" paychecks. Drum machines, bands in boxes and Digital Audio Workstations have helped a little, and even swing, but the sounds in even the best drum machines, while dynamic, are often too perfect. Every hit, at a given velocity in a given drum set, sounds the same, unlike a human drummer. I want a system that has inherent, "human like" imperfections that make every stroke sound like a human played it, while still allowing a solo artist to perform to pre-recorded backing tracks, and I want this to be as affordable and accessible as anything in today's typical home studio.
 
 Hence, SoléBot, the solenoid operated drumming robot. The aim is to develop a multi-output control board that can drive solenoids to beat drums, cymbals and other percussion, as commanded by MIDI data from a drum machine or DAW. I envisage this control board being adaptable to other instruments, like bass guitar, too. I'll be occasionally demonstrating developments working on my youtube channel, too, in [this playlist](https://www.youtube.com/playlist?list=PLrngkZ75bHDKrJ51mYCRLDtqRJ-8iNQGl).
 
