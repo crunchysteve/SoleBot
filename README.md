@@ -7,7 +7,28 @@
 
 # SoléBot
 
-Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine or DAW. Named "SoléBot" for the solenoid actuators used to directly beat the drums.
+Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine 
+or DAW. Named "SoléBot" for the solenoid actuators used to directly beat the drums.
+
+# Currently working on 2 different models of Hi-Hat clutch system.
+
+20250113-1153AEDT: Having both my 3D printers working again, I'm prototyping a hi-hat stand 
+modification and a "drumtop" model. I'm not liking the drumtop model. I'll upload pictures 
+when and if one or the other works better than its competitor.
+
+The hi-hats are posing the stiffest design problems. Unlike tiny, plastic beaters, cymbals
+are *heavy*! I'm trying to incorporate full MIDI open, half and closed into the design 
+while making it workable without going for too many or too expensive solenoids. It's 
+looking like springs resisting gravity while the solenoids for open and close pull down.
+
+I have a tabletop rig that works this^ way for a 2 state hi-hat (open or closed) but, adding 
+the closeing solenoid will make it top heavy, so I'm reluctantly going back to taking the 
+pedal off my hi-hat stand and adding a drop clutch system for fully open. Close pulls down 
+top cymbal via pedal linkage, open pulls down bottom cymbal via drop clutch and half is 
+set by trimming the top cymbal height to be lightly lip to lip, using the conventional
+clutch. As I say, piccies, soon.
+
+I haven't yet added any scad files for either mech because they ugly.
 
 # New Solenoid Bracket Design
 
@@ -23,15 +44,6 @@ Pictures...
 The Gibraltar Vintage Hoop clamps come in a pack of 6, enough for three brackets.The little hooky-shaped thing on its side is what they look like. I think this design, which offers more adjustment of beater position and and height is a big improvement on the previous design. For those running bedslinger 3D printers, easier to print than the old design, too, and stronger if your bedslinger's only good for PLA.
 
 The rim hooks are [Gibratar part ID SC-VHTRC](https://gibraltarhardware.com/products/sc-vhtrc-tension-rod-clips).
-
-#Another Stage in the working Prototype
-
-20241212-1835AEDT: The "Markmothersburg" now has a 24v power supply, a MIDI interface and a housing. Just waiting for the 5v buck converter to arrive and I can start wiring it up. Pictures...
-
-![SoléBotLidded](https://github.com/user-attachments/assets/9c6db680-a43c-4a7f-b671-45194a8aac0b)
-![SoléUnledded](https://github.com/user-attachments/assets/205b902c-3f0b-4b2c-b485-7c083a3434f6)
-
-All that's left after tht is to wire up the MIDI receiver and hook it up to the drums.
 
 # Background
 
