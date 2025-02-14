@@ -1,7 +1,7 @@
 use <hexagonalprism.scad>
 use <solenoids.scad>
 
-assembled = false;     //  false for printing, true for assembled
+assembled = true;     //  false for printing, true for assembled
 
 /*  DESIGN NOTES
     ------------
@@ -15,14 +15,13 @@ assembled = false;     //  false for printing, true for assembled
 */
 
 if(assembled){
-    openerBrkt();
-    translate([-18.75,-16,77]) 
-            rotate([180,0,0]) solenoid(type="JF1250B");
+    openerBrkt();   //  false for hex nuts, true for heat insert
+    translate([18.75,-16,39]) rotate([0,0,180]) solenoid(type="JF1250B");
 } else {
     translate([0,0,16]) rotate([90,0,0]) openerBrkt();
 }
 
-module openerBrkt() difference(){
+module openerBrkt(insertNut=false) difference(){
     union(){
         linear_extrude(height=22.2) difference(){
             offset(2) offset(-2) square([44,32],center=true);
@@ -35,10 +34,14 @@ module openerBrkt() difference(){
     for(x=[-14.5,14.5]){
         translate([x,17,11.1]) rotate([90,0,0]) cylinder(r=3.2,h=34);
         translate([x,17,11.1]) rotate([90,0,0]) cylinder(r=5.7,h=7);
-        translate([x,-17,11.1]) rotate([-90,0,0]) 
-                rotate([0,0,30]) hexPrism(r=6.6,h=7);
+        if(!insertNut){
+            translate([x,-17,11.1]) rotate([-90,0,0]) 
+                    rotate([0,0,30]) hexPrism(r=6.6,h=7);
+        } else {
+            translate([x,-17,11.1]) rotate([-90,0,0]) cylinder(r=4,h=10);
+        }
     }
-    for(x=[-11,11]) for(z=[46,69.5]){
+    for(x=[-11,11]) for(z=[46.5,69.5]){
         translate([x,0,z]) rotate([90,0,0]) cylinder(r=2,h=22);
     }
 }
