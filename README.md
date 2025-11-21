@@ -5,6 +5,10 @@
 [What is SoléBot?](#solébot) - [Background](#background) - [Reasons](#why) - [Progress](#progress) -
 [Scope](#scope) - [Contribution & Maintenance](#contribution-and-maintenance)
 
+# What's Been Going On, Dude?!
+
+Health issues, a friend with health issues, a massive, expensive, recumbent trike stored in my music studio and simply finding time and resources has stalled this project at a point where I could get blinking lights from midi signals on the prototype. It probably works, go ahead and fiddle with your own builds if you're game. Find any bugs, fix and pull. I fully intend to return to this, it's a primary goal to have this working, making music with it. A life's ambition of a robotic one man band. Not to mention the benefits of accessible live drumming via a drum machine or drum control pad for the disabled or those unable to learn drumming.
+
 # SoléBot
 
 Solenoid operated, adaptable, robotic drumkit to play real drums from a MIDI drum machine 
