@@ -3,9 +3,5 @@
 .vscode/c_cpp_properties.json
 .vscode/launch.json
 .vscode/ipch
-.code-workspace
-.DS_Store
-
-
-
-Files/
+.code-workspace/
+.DS_Store/
