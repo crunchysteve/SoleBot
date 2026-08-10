@@ -7,7 +7,9 @@
 
 # What's Been Going On, Dude?!
 
-Health issues, a friend with health issues, a massive, expensive, recumbent trike stored in my music studio and simply finding time and resources has stalled this project at a point where I could get blinking lights from midi signals on the prototype. It probably works, go ahead and fiddle with your own builds if you're game. Find any bugs, fix and pull. I fully intend to return to this, it's a primary goal to have this working, making music with it. A life's ambition of a robotic one man band. Not to mention the benefits of accessible live drumming via a drum machine or drum control pad for the disabled or those unable to learn drumming.
+Nearly in a position to start working on this project again... Oh gawd, I'm putting the mmockers on myself, Aren't I?
+
+Also beginning a migration from github to codeberg, as a more friendly environment to an AI opposed citizen like me.
 
 # SoléBot
 
